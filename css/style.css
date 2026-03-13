@@ -295,9 +295,8 @@ header form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   gap: 2rem;
-  padding: 0;
   margin: 0;
   height: auto;
   color: white;
@@ -307,35 +306,37 @@ header form {
   max-width: 100%;
 }
 
-/* line 17, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+/* line 16, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
 .serv_list {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
-  gap: 4rem;
+  align-items: center;
   list-style: none;
   margin: 0;
-  padding: 1rem 3rem;
+  padding: 0;
 }
 
-/* line 27, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+/* line 25, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
 .serv_list li {
   flex: 1;
 }
 
-/* line 31, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+/* line 29, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
 .serv_list li a {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
   text-decoration: none;
   color: inherit;
   height: 100%;
+  padding: .3rem;
+  padding-bottom: 0.8rem;
 }
 
-/* line 42, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+/* line 43, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
 .serv_list .icon {
   display: inline-flex;
   align-items: center;
@@ -346,22 +347,57 @@ header form {
   line-height: 1;
 }
 
-/* line 52, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+/* line 53, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
 .serv_list .small {
   display: block;
   margin-bottom: 0.1rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 1.1;
 }
 
-/* line 61, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+/* line 62, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
 .serv_list .large {
   display: block;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   line-height: 1;
+}
+
+/* line 69, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.consultancy-tab:hover {
+  background-color: #67809f;
+}
+
+/* line 73, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.it-tab:hover {
+  background-color: #4183d7;
+}
+
+/* line 77, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.marketing-tab:hover {
+  background-color: #4caf50;
+}
+
+/* line 81, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.telecoms-tab:hover {
+  background-color: #ce4125;
+}
+
+/* line 85, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.web-tab:hover {
+  background-color: #926fb1;
+}
+
+/* line 89, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.security-tab:hover {
+  background-color: #f5255a;
+}
+
+/* line 93, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.developer-tab:hover {
+  background-color: #ce4125;
 }
 
 /* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */

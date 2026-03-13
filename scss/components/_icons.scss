@@ -1,0 +1,128 @@
+.support-icon::before {
+  content: "\ea09";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.contact-icon::before {
+  content: "\e942";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.search-icon::before {
+  content: "\e986";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.sidebar-icon::before {
+  content: "\e9bd";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.consultancy-icon::before {
+  content: "\e957";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.it-icon::before {
+  content: "\e956";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.marketing-icon::before {
+  content: "\e99c";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.telecoms-icon::before {
+  content: "\e943";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.web-icon::before {
+  content: "\ea80";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.security-icon::before {
+  content: "\e9b4";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.developer-icon::before {
+  content: "\e912";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.telecoms-icon::before {
+  content: "\e943";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.fb-icon::before {
+  content: "\ea90";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.in-icon::before {
+  content: "\eaca";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.x-icon::before {
+  content: "\ea96";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.ig-icon::before {
+  content: "\ea92";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+// Set colour of icons in services panel
+.serv_list .consultancy-icon {
+    color: $steel-blue;
+}
+
+.serv_list .it-icon {
+    color: $light-blue;
+}
+
+.serv_list .marketing-icon {
+    color: $light-green;
+}
+
+.serv_list .telecoms-icon {
+    color: $dark-red;
+}
+
+.serv_list .web-icon {
+    color: $purple;
+}
+
+.serv_list .security-icon {
+    color: $light-red;
+}
+
+.serv_list .developer-icon {
+    color: $dark-red;
+}
+
+.serv_list li:hover .icon {
+    color: white;
+}

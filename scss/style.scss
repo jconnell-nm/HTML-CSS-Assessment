@@ -1,12 +1,13 @@
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'layout';
-@import 'buttons';
-@import 'navigation';
-@import 'fonts';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
 
-body {
-    font-family: Poppins, sans-serif;
-    letter-spacing: .4px;
-}
+@import 'base/base';
+@import 'base/fonts';
+
+@import 'components/buttons';
+@import 'components/icons';
+
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/service-panel';
+@import 'layout/main-carousel';

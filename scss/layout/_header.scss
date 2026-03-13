@@ -1,0 +1,11 @@
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: $spacing-sm $spacing-md;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+}

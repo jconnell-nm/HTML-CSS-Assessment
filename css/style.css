@@ -1,184 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
-/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_base.scss */
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/base/_base.scss */
 body {
   font-family: Poppins, sans-serif;
   color: #333645;
   background: white;
-}
-
-/* line 5, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 8px 16px;
-}
-
-/* line 14, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-.main-carousel {
-  width: 500px;
-  position: relative;
-}
-
-/* line 19, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-.slides {
-  position: relative;
-  width: 100%;
-  height: 300px;
-}
-
-/* line 25, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-.slides img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
-}
-
-/* line 33, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-.main-carousel input[type="radio"] {
-  display: none;
-}
-
-/* line 37, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-input#slide1:checked ~ .slides .slide1 {
-  display: block;
-}
-
-/* line 41, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-input#slide2:checked ~ .slides .slide2 {
-  display: block;
-}
-
-/* line 45, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-input#slide3:checked ~ .slides .slide3 {
-  display: block;
-}
-
-/* line 49, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-input#slide4:checked ~ .slides .slide4 {
-  display: block;
-}
-
-/* line 53, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-input#slide5:checked ~ .slides .slide5 {
-  display: block;
-}
-
-/* line 57, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-input#slide6:checked ~ .slides .slide6 {
-  display: block;
-}
-
-/* line 61, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-input#slide7:checked ~ .slides .slide7 {
-  display: block;
-}
-
-/* line 65, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-.buttons {
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* line 70, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-.buttons label {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-color: #bbb;
-  border-radius: 50%;
-  margin: 5px;
-  cursor: pointer;
-}
-
-/* line 3, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-[class$="-btn"] {
-  font-family: inherit;
-}
-
-/* line 9, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.header-btn-lrg, .support-btn, .contact-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  height: 60px;
-  padding: 8px 16px;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* line 22, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.support-btn {
-  background: #4183d7;
-  border: 2px solid #4183d7;
-}
-
-/* line 28, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.contact-btn {
-  background: #999AA2;
-  border: 2px solid #999AA2;
-}
-
-/* line 34, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.support-btn:hover {
-  background: #286abd;
-  border-color: #286abd;
-}
-
-/* line 39, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.contact-btn:hover {
-  background: #7e808a;
-  border-color: #7e808a;
-}
-
-/* line 44, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.header-btn-sml, .search-btn, .sidebar-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  height: 60px;
-  padding: 8px 16px;
-  font-size: 24px;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* line 56, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-input[type="search"] {
-  padding: 10px;
-  border: 1px solid #999AA2;
-  font-size: 16px;
-  height: 60px;
-}
-
-/* line 63, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.search-btn {
-  background: #999AA2;
-  border: 2px solid #999AA2;
-}
-
-/* line 69, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.sidebar-btn {
-  background: #333645;
-  border: 2px solid #333645;
-}
-
-/* line 75, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.search-btn:hover {
-  background: #7e808a;
-  border-color: #7e808a;
-}
-
-/* line 80, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.sidebar-btn:hover {
-  background: #1d1f28;
-  border-color: #1d1f28;
 }
 
 @font-face {
@@ -190,7 +15,7 @@ input[type="search"] {
   font-display: block;
 }
 
-/* line 15, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 15, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/base/_fonts.scss */
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -205,128 +30,417 @@ input[type="search"] {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 78, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 29, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/base/_fonts.scss */
 .rating {
   color: gold;
   font-size: 24px;
 }
 
-/* line 83, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 3, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+[class$="-btn"] {
+  font-family: inherit;
+}
+
+/* line 9, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.header-btn-lrg, .support-btn, .contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  padding: 8px 16px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* line 22, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.support-btn {
+  background: #4183d7;
+  border: 2px solid #4183d7;
+}
+
+/* line 28, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.contact-btn {
+  background: #999AA2;
+  border: 2px solid #999AA2;
+}
+
+/* line 34, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.support-btn:hover {
+  background: #286abd;
+  border-color: #286abd;
+}
+
+/* line 39, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.contact-btn:hover {
+  background: #7e808a;
+  border-color: #7e808a;
+}
+
+/* line 44, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.header-btn-sml, .search-btn, .sidebar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  padding: 8px 16px;
+  font-size: 24px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* line 56, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+input[type="search"] {
+  padding: 10px;
+  border: 1px solid #999AA2;
+  font-size: 16px;
+  height: 60px;
+}
+
+/* line 63, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.search-btn {
+  background: #999AA2;
+  border: 2px solid #999AA2;
+}
+
+/* line 69, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.sidebar-btn {
+  background: #333645;
+  border: 2px solid #333645;
+}
+
+/* line 75, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.search-btn:hover {
+  background: #7e808a;
+  border-color: #7e808a;
+}
+
+/* line 80, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_buttons.scss */
+.sidebar-btn:hover {
+  background: #1d1f28;
+  border-color: #1d1f28;
+}
+
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .support-icon::before {
   content: "\ea09";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 89, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 7, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .contact-icon::before {
   content: "\e942";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 95, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 13, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .search-icon::before {
   content: "\e986";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 101, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 19, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .sidebar-icon::before {
   content: "\e9bd";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 107, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 25, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .consultancy-icon::before {
   content: "\e957";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 113, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 31, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .it-icon::before {
   content: "\e956";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 119, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 37, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .marketing-icon::before {
   content: "\e99c";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 125, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 43, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .telecoms-icon::before {
   content: "\e943";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 131, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 49, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .web-icon::before {
   content: "\ea80";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 137, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 55, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .security-icon::before {
   content: "\e9b4";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 143, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 61, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .developer-icon::before {
   content: "\e912";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 149, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 67, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .telecoms-icon::before {
   content: "\e943";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 155, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 73, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .fb-icon::before {
   content: "\ea90";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 161, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 79, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .in-icon::before {
   content: "\eaca";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 167, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 85, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .x-icon::before {
   content: "\ea96";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 173, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
+/* line 91, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
 .ig-icon::before {
   content: "\ea92";
   font-family: 'icomoon';
   display: inline-block;
 }
 
-/* line 9, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/style.scss */
-body {
-  font-family: Poppins, sans-serif;
-  letter-spacing: .4px;
+/* line 98, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
+.serv_list .consultancy-icon {
+  color: #67809f;
+}
+
+/* line 102, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
+.serv_list .it-icon {
+  color: #4183d7;
+}
+
+/* line 106, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
+.serv_list .marketing-icon {
+  color: #4caf50;
+}
+
+/* line 110, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
+.serv_list .telecoms-icon {
+  color: #ce4125;
+}
+
+/* line 114, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
+.serv_list .web-icon {
+  color: #926fb1;
+}
+
+/* line 118, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
+.serv_list .security-icon {
+  color: #f5255a;
+}
+
+/* line 122, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
+.serv_list .developer-icon {
+  color: #ce4125;
+}
+
+/* line 126, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
+.serv_list li:hover .icon {
+  color: white;
+}
+
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 16px;
+}
+
+/* line 8, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+header form {
+  display: flex;
+  align-items: center;
+}
+
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.serv_panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  color: white;
+  text-transform: uppercase;
+  background-color: #333645;
+  min-width: 320px;
+  max-width: 100%;
+}
+
+/* line 17, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.serv_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 4rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 3rem;
+}
+
+/* line 27, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.serv_list li {
+  flex: 1;
+}
+
+/* line 31, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.serv_list li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+/* line 42, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.serv_list .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+/* line 52, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.serv_list .small {
+  display: block;
+  margin-bottom: 0.1rem;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+/* line 61, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_service-panel.scss */
+.serv_list .large {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+.main-carousel {
+  width: 500px;
+  position: relative;
+}
+
+/* line 6, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+.slides {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+/* line 12, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+.slides img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+/* line 20, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+.main-carousel input[type="radio"] {
+  display: none;
+}
+
+/* line 24, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+input#slide1:checked ~ .slides .slide1 {
+  display: block;
+}
+
+/* line 28, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+input#slide2:checked ~ .slides .slide2 {
+  display: block;
+}
+
+/* line 32, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+input#slide3:checked ~ .slides .slide3 {
+  display: block;
+}
+
+/* line 36, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+input#slide4:checked ~ .slides .slide4 {
+  display: block;
+}
+
+/* line 40, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+input#slide5:checked ~ .slides .slide5 {
+  display: block;
+}
+
+/* line 44, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+input#slide6:checked ~ .slides .slide6 {
+  display: block;
+}
+
+/* line 48, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+input#slide7:checked ~ .slides .slide7 {
+  display: block;
+}
+
+/* line 52, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+.buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* line 57, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+.buttons label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

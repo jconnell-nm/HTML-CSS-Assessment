@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <img src="img/f-logo.webp">
+            <button class="support-btn">
+                <span class="support-icon" aria-hidden="true"></span>
+                SUPPORT
+            </button>
+            <button class="contact-btn">
+                <span class="contact-icon" aria-hidden="true"></span>
+                CONTACT
+            </button>
+            <form action="/search" method="get">
+                <input type="text" placeholder="Search...">
+                <button type="submit" class="search-btn"></button>
+            </form>
+            <button class="sidebar-btn">
+                <span class="sidebar-icon" aria-hidden="true"></span>
+            </button>
+        </header>
+
+        <div class="services_panel">
+            <span class="consultancy-icon" aria-hidden="true"></span>
+            <h4>Consultancy & Development</h4>
+            <span class="it-icon" aria-hidden="true"></span>
+            <h4>IT Support</h4>
+            <span class="marketing-icon" aria-hidden="true"></span>
+            <h4>Digital Marketing</h4>
+            <span class="telecoms-icon" aria-hidden="true"></span>
+            <h4>Telecoms Services</h4>
+            <span class="web-icon" aria-hidden="true"></span>
+            <h4>Web Design</h4>
+            <span class="security-icon" aria-hidden="true"></span>
+            <h4>Cyber Security</h4>
+            <span class="developer-icon" aria-hidden="true"></span>
+            <h4>Developer Course</h4>
+        </div>
+
+        <div class="main-carousel">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+            <input type="radio" name="slide" id="slide6">
+            <input type="radio" name="slide" id="slide7">
+
+            <div class="slides">
+                <img class="slide1" src="img/main-carousel-1.webp">
+                <h2>The East Of England's Leading Technology Company</h2>
+                <h4>Performance-driven digital and technology services with complete transparency.</h4>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">WHY CHOOSE US? &#8594;</button>
+                <img class="slide2" src="img/main-carousel-2.webp">
+                <h2>Bespoke Software</h2>
+                <h4>Delivering expert bespoke software solutions across a range of industries</h4>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
+                <img class="slide3" src="img/main-carousel-3.webp">
+                <h2>IT Support</h2>
+                <h4>Fast and cost-effective IT support services for your business.</h4>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
+                <img class="slide4" src="img/main-carousel-4.webp">
+                <h2>Digital Marketing</h2>
+                <h4>Generating your new business through results-driven marketing activities</h4>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
+                <img class="slide5" src="img/main-carousel-5.webp">
+                <h2>Telecoms Services</h2>
+                <h4>A new approach to connectivity, see how we can help your business.</h4>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
+                <img class="slide6" src="img/main-carousel-6.webp"> 
+                <h2>Web Design</h2>
+                <h4>For businesses looking to make a strong and effective first impression.</h4>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
+                <img class="slide7" src="img/main-carousel-7.webp">
+                <h2>Cyber Security</h2>
+                <h4>Keeping businesses and their customers sensitive information protected.</h4>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="showSlide(0)"></button>
+            <button onclick="showSlide(1)"></button>
+            <button onclick="showSlide(2)"></button>
+            <button onclick="showSlide(3)"></button>
+            <button onclick="showSlide(4)"></button>
+            <button onclick="showSlide(5)"></button>
+            <button onclick="showSlide(6)"></button>
+        </div>
+
+        <div class="services">
+            <div class="consultancy-service">
+                <span class="consultancy-icon" aria-hidden="true"></span>
+                <h2>Consultancy & Development</h2>
+                <p>Bespoke software solutions & consultancy for all your business needs including integrations and reporting.</p>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE</button>
+            </div>
+            <div class="it-service">
+                <span class="it-icon" aria-hidden="true"></span>
+                <h2>IT Support</h2>
+                <p>Fully managed IT support and consultancy packages tailored to meet your exact business needs.</p>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE</button>
+            </div>
+            <div class="marketing-service">
+                <span class="marketing-icon" aria-hidden="true"></span>
+                <h2>Digital Marketing</h2>
+                <p>Driven brand awareness & ROI through creative digital marketing campaigns.</p>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE</button>
+            </div>
+            <div class="telecoms-service">
+                <span class="telecoms-icon" aria-hidden="true"></span>
+                <h2>Telecoms Services</h2>
+                <p>Business telephony solutions including mobile & connectivity solutions.</p>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE</button>
+            </div>
+            <div class="web-service">
+                <span class="web-icon" aria-hidden="true"></span>
+                <h2>Web Design</h2>
+                <p>User-centric design for businesses looking to make a lasting impression.</p>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE</button>
+            </div>
+            <div class="security-service">
+                <span class="security-icon" aria-hidden="true"></span>
+                <h2>Cyber Security</h2>
+                <p>Prevention, testing, consultancy & breach management services.</p>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE</button>
+            </div>
+            <div class="developer-service">
+                <span class="developer-icon" aria-hidden="true"></span>
+                <h2>Developer Training</h2>
+                <p>Web design & software training courses designed to secure a job in tech.</p>
+                <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE</button>
+            </div>
+        </div>
+
+        <div class="view-our-work">
+            <a href="#">View Our Work &#8594;</a>
+            <div class="work-slides">
+                <img class="ws1" src="img/work-carousel-1.jpg">
+                <img class="ws1-col" src="img/work-carousel-1-col.jpg">
+                <img class="ws2" src="img/work-carousel-2.webp">
+                <img class="ws2-col" src="img/work-carousel-2-col.webp">
+                <img class="ws3" src="img/work-carousel-3.png">
+                <img class="ws3-col" src="img/work-carousel-3-col.png">
+                <img class="ws4" src="img/work-carousel-4.jpg">
+                <img class="ws4-col" src="img/work-carousel-4-col.jpg">
+                <img class="ws5" src="img/work-carousel-5.jpg">
+                <img class="ws5-col" src="img/work-carousel-5-col.jpg">
+                <img class="ws6" src="img/work-carousel-6.jpg"> 
+                <img class="ws6-col" src="img/work-carousel-6-col.jpg">
+                <img class="ws7" src="img/work-carousel-7.png">
+                <img class="ws7-col" src="img/work-carousel-7-col.png">
+                <img class="ws8" src="img/work-carousel-8.jpg">
+                <img class="ws8-col" src="img/work-carousel-8-col.jpg">
+                <img class="ws9" src="img/work-carousel-9.png">
+                <img class="ws9-col" src="img/work-carousel-9-col.png">
+                <img class="ws10" src="img/work-carousel-10.png">
+                <img class="ws10-col" src="img/work-carousel-10-col.png">
+                <img class="ws11" src="img/work-carousel-11.jpg">
+                <img class="ws11-col" src="img/work-carousel-11-col.jpg">
+                <img class="ws12" src="img/work-carousel-12.jpg">
+                <img class="ws12-col" src="img/work-carousel-12-col.jpg">
+            </div>
+        </div>
+        <div class="welcome">
+            <h1>Welcome To Netmatters</h1>
+            <p>
+                Netmatters is a leading <a href="#top">Bespoke Software</a>, <a href="#top">IT Support</a>, and <a href="#top">Digital Marketing</a> company
+                based in the East of England with offices in <a href="#top">Cambridge</a>, <a href="#top">Wymondham</a>, and <a href="#top">Great Yarmouth</a>.
+            </p>
+            <p>
+                We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.    
+            </p>
+            <p>
+                We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.
+            </p>
+            <button onclick="window.scrollTo(0,0)" class="reg-btn">WHY CHOOSE US? &#8594;</button>
+            <button onclick="window.scrollTo(0,0)" class="reg-btn">OUR CULTURE &#8594;</button>
+            
+            <h1>
+                What Our Clients Think
+            </h1>
+
+            <div class="rating">
+                *****
+            </div>
+
+            <p>Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</p>
+
+            <p>Eleanor Bishop, Head of Marketing - <a href="#top">Ashcroft Partnership LLP</a></p>
+
+            <button onclick="window.scrollTo(0,0)" class="reg-btn">GOOGLE REVIEWS &#8594;</button>
+            <button onclick="window.scrollTo(0,0)" class="reg-btn">TRUSTPILOT REVIEWS &#8594;</button>
+        </div>
+
+        <div class="news">
+            <h1>Latest News</h1>
+            <img src="img/news-1.webp">
+            <h6>How Much Could Bespoke Software Add to Your E...</h6>
+            <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE:</button>
+            <img src="img/nm-icon.webp">
+            <p>Posted by Netmatters</p>
+            <p>27th June 2025</p>
+
+            <img src="img/news-2.webp">
+            <h6>How Can AI Benefit My Business?</h6>
+            <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE:</button>
+            <img src="img/nm-icon.webp">
+            <p>Posted by Netmatters</p>
+            <p>26th June 2025</p>
+
+            <img src="img/news-3.png">
+            <h6>1st Line Technician</h6>
+            <button onclick="window.scrollTo(0,0)" class="reg-btn">READ MORE:</button>
+            <img src="img/news-poster-icon.webp">
+            <p>Posted by Netmatters</p>
+            <p>27th June 2025</p>
+        </div>
+
+        <div class="business">
+            <a href="#"> View All &#8594;</a>
+
+            <div class="bus-slides">
+                <img class="bs1" src="img/bus-carousel-1.webp">
+                <img class="bs2" src="img/bus-carousel-2.webp">
+                <img class="bs3" src="img/bus-carousel-3.webp">
+                <img class="bs4" src="img/bus-carousel-4.webp">
+                <img class="bs5" src="img/bus-carousel-5.webp">
+                <img class="bs6" src="img/bus-carousel-6.webp"> 
+                <img class="bs7" src="img/bus-carousel-7.webp">
+                <img class="bs8" src="img/bus-carousel-8.webp">
+                <img class="bs9" src="img/bus-carousel-9.webp">
+                <img class="bs10" src="img/bus-carousel-10.webp">
+                <img class="bs11" src="img/bus-carousel-11.webp">
+                <img class="bs12" src="img/bus-carousel-12.webp">
+                <img class="bs13" src="img/bus-carousel-13.webp">
+            </div>
+        </div>
+
+        <div class="contact-us">
+            <img src="img/nm-logo-white-med.webp">
+            <h3>FOLLOW US ON:</h3>
+            <ul class="social-links">
+                <a href="#" target="_blank">
+                    <span class="fb-icon" aria-hidden="true"></span>
+                </a>
+                <a href="#" target="_blank">
+                    <span class="in-icon" aria-hidden="true"></span>
+                </a>
+                <a href="#" target="_blank">
+                    <span class="x-icon" aria-hidden="true"></span>
+                </a>
+                <a href="#" target="_blank">
+                    <span class="ig-icon" aria-hidden="true"></span>
+                </a>
+            </ul>
+            <h3>ABOUT NETMATTERS</h3>
+            <nav class="about-nav">
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Our Careers</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Data Retention</a></li>
+                    <li><a href="#">CCTV Policy</a></li>
+                    <li><a href="#">Environmental Policy</a></li>
+                    <li><a href="#">Sexual Harassment Policy</a></li>
+                    <li><a href="#">Modern Slavery Statement</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </nav>
+            <h3>OUR SERVICES</h3>
+            <nav class="services-nav">
+                <ul>
+                    <li><a href="#">Bespoke Software</a></li>
+                    <li><a href="#">IT Support</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">Telecoms Services</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Cyber Security</a></li>
+                    <li><a href="#">Developer Training</a></li>
+                </ul>
+            </nav>
+            <h3>OUR INDUSTRIES</h3>
+            <nav class="industries-nav">
+                <ul>
+                    <li><a href="#">Financial Services</a></li>
+                    <li><a href="#">Construction</a></li>
+                    <li><a href="#">Retail & E-Commerce</a></li>
+                    <li><a href="#">Non-Profits</a></li>
+                    <li><a href="#">SME's</a></li>
+                    <li><a href="#">Healthcare</a></li>
+                    <li><a href="#">Education & Training</a></li>
+                    <li><a href="#">Travel & Leisure</a></li>
+                    <li><a href="#">Manufacturing & Offshore></a></li>
+                </ul>
+            </nav>
+            <h3>LOCATIONS</h3>
+            <nav class="locations-nav">
+                <ul>
+                    <li><a href="#">Cambridge Office</a></li>
+                    <li><a href="#">Wymondham Office</a></li>
+                    <li><a href="#">Great Yarmouth Office</a></li>
+                </ul>
+            </nav>
+        </section>
+        <footer>
+            <p>
+                &copy; Copyright Netmatters 2025.<br>
+                All rights reserved.<br>
+                Sitemap<br>
+            </p>
+        </footer>
+    </body>
+</html>

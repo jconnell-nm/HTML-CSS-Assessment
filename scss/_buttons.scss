@@ -1,0 +1,62 @@
+// Use main font for all buttons
+
+[class$="-btn"] {
+    font-family: inherit;
+}
+
+// Header Buttons
+
+.header-btn-lrg {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: $spacing-sm $spacing-md;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 4px;
+}
+
+.support-btn {
+    @extend .header-btn-lrg;
+    background: $light-blue;
+    border: 2px solid $light-blue;
+}
+
+.contact-btn {
+    @extend .header-btn-lrg;
+    background: $grey;
+    border: 2px solid $grey;
+}
+
+.support-btn:hover {
+    background: darken($light-blue, 10%);
+    border-color: darken($light-blue, 10%);
+}
+
+.contact-btn:hover {
+    background: darken($grey, 10%);
+    border-color: darken($grey, 10%);
+}
+
+.header-btn-sml {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: $spacing-sm $spacing-sm;
+    font-size: 24px;
+    color: white;
+    border-radius: 4px;
+}
+
+.search-btn {
+    @extend .header-btn-sml;
+    background: $light-blue;
+    border: 2px solid $light-blue;
+}
+
+.contact-btn {
+    @extend .header-btn-sml;
+    background: $grey;
+    border: 2px solid $grey;
+}

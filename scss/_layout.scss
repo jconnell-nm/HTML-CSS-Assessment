@@ -1,12 +1,15 @@
-.container {
-    max-width: $max-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $container-padding;
-    padding-right: $container-padding;
+
+
+// Header
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: $spacing-sm $spacing-md;
 }
 
-// main-carousel styles
+// Main carousel
 
 .main-carousel {
     width: 500px;
@@ -27,7 +30,7 @@
     display: none;
 }
 
-input {
+.main-carousel input[type="radio"] {
     display: none;
 }
 

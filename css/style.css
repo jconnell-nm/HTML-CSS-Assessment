@@ -6,29 +6,28 @@ body {
   background: white;
 }
 
-/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+/* line 5, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 16px;
 }
 
-/* line 11, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 14, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 .main-carousel {
   width: 500px;
   position: relative;
 }
 
-/* line 16, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 19, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 .slides {
   position: relative;
   width: 100%;
   height: 300px;
 }
 
-/* line 22, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 25, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 .slides img {
   position: absolute;
   width: 100%;
@@ -37,53 +36,53 @@ body {
   display: none;
 }
 
-/* line 30, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
-input {
+/* line 33, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+.main-carousel input[type="radio"] {
   display: none;
 }
 
-/* line 34, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 37, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 input#slide1:checked ~ .slides .slide1 {
   display: block;
 }
 
-/* line 38, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 41, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 input#slide2:checked ~ .slides .slide2 {
   display: block;
 }
 
-/* line 42, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 45, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 input#slide3:checked ~ .slides .slide3 {
   display: block;
 }
 
-/* line 46, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 49, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 input#slide4:checked ~ .slides .slide4 {
   display: block;
 }
 
-/* line 50, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 53, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 input#slide5:checked ~ .slides .slide5 {
   display: block;
 }
 
-/* line 54, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 57, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 input#slide6:checked ~ .slides .slide6 {
   display: block;
 }
 
-/* line 58, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 61, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 input#slide7:checked ~ .slides .slide7 {
   display: block;
 }
 
-/* line 62, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 65, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 .buttons {
   text-align: center;
   margin-top: 10px;
 }
 
-/* line 67, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
+/* line 70, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_layout.scss */
 .buttons label {
   display: inline-block;
   width: 12px;
@@ -104,58 +103,82 @@ input#slide7:checked ~ .slides .slide7 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  height: 60px;
   padding: 8px 16px;
   font-size: 24px;
   text-transform: uppercase;
   color: white;
   border-radius: 4px;
+  cursor: pointer;
 }
 
-/* line 20, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+/* line 22, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
 .support-btn {
   background: #4183d7;
   border: 2px solid #4183d7;
 }
 
-/* line 26, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+/* line 28, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
 .contact-btn {
   background: #999AA2;
   border: 2px solid #999AA2;
 }
 
-/* line 32, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+/* line 34, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
 .support-btn:hover {
   background: #286abd;
   border-color: #286abd;
 }
 
-/* line 37, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+/* line 39, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
 .contact-btn:hover {
   background: #7e808a;
   border-color: #7e808a;
 }
 
-/* line 42, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.header-btn-sml, .search-btn, .contact-btn {
+/* line 44, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+.header-btn-sml, .search-btn, .sidebar-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 8px;
+  height: 60px;
+  padding: 8px 16px;
   font-size: 24px;
   color: white;
   border-radius: 4px;
+  cursor: pointer;
 }
 
-/* line 52, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+/* line 56, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+input[type="search"] {
+  padding: 10px;
+  border: 1px solid #999AA2;
+  font-size: 16px;
+  height: 60px;
+}
+
+/* line 63, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
 .search-btn {
-  background: #4183d7;
-  border: 2px solid #4183d7;
-}
-
-/* line 58, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
-.contact-btn {
   background: #999AA2;
   border: 2px solid #999AA2;
+}
+
+/* line 69, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+.sidebar-btn {
+  background: #333645;
+  border: 2px solid #333645;
+}
+
+/* line 75, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+.search-btn:hover {
+  background: #7e808a;
+  border-color: #7e808a;
+}
+
+/* line 80, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_buttons.scss */
+.sidebar-btn:hover {
+  background: #1d1f28;
+  border-color: #1d1f28;
 }
 
 @font-face {
@@ -204,7 +227,7 @@ input#slide7:checked ~ .slides .slide7 {
 
 /* line 95, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/_fonts.scss */
 .search-icon::before {
-  content: "\e9bd";
+  content: "\e986";
   font-family: 'icomoon';
   display: inline-block;
 }

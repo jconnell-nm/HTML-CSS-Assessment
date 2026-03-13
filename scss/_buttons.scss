@@ -10,11 +10,13 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    height: 60px;
     padding: $spacing-sm $spacing-md;
     font-size: 24px;
     text-transform: uppercase;
     color: white;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .support-btn {
@@ -43,20 +45,39 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: $spacing-sm $spacing-sm;
+    height: 60px;
+    padding: $spacing-sm $spacing-md;
     font-size: 24px;
     color: white;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="search"] {
+    padding: 10px;
+    border: 1px solid $grey;
+    font-size: 16px;
+    height: 60px;
 }
 
 .search-btn {
     @extend .header-btn-sml;
-    background: $light-blue;
-    border: 2px solid $light-blue;
-}
-
-.contact-btn {
-    @extend .header-btn-sml;
     background: $grey;
     border: 2px solid $grey;
+}
+
+.sidebar-btn {
+    @extend .header-btn-sml;
+    background: $dark-blue;
+    border: 2px solid $dark-blue;
+}
+
+.search-btn:hover {
+    background: darken($grey, 10%);
+    border-color: darken($grey, 10%);
+}
+
+.sidebar-btn:hover {
+    background: darken($dark-blue, 10%);
+    border-color: darken($dark-blue, 10%);
 }

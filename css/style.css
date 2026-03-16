@@ -721,4 +721,31 @@ input[type="search"] {
   background: #ce4125;
 }
 
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+.view-our-work {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 6, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+.work-slides {
+  display: flex;
+  gap: 40px;
+  animation: scroll 20s linear infinite;
+}
+
+/* line 12, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+.work-slides img {
+  height: 75px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

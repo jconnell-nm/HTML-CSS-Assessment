@@ -1,0 +1,23 @@
+.view-our-work {
+    overflow: hidden;
+    width: 100%;
+}
+
+.work-slides {
+    display: flex;
+    gap: 40px;
+    animation: scroll 20s linear infinite;
+}
+
+.work-slides img {
+    height: 75px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

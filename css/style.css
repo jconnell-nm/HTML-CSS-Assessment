@@ -565,4 +565,160 @@ input[type="search"] {
   background: white;
 }
 
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* line 9, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-header h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+/* line 15, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-header a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+/* line 21, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-header a:hover {
+  text-decoration: underline;
+}
+
+/* line 25, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-header a:visited {
+  color: #333645;
+}
+
+/* line 29, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services {
+  padding: 50px 150px;
+  background: #f4f4f4;
+}
+
+/* line 34, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* line 44, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-container > div:not(.services-header) {
+  background: white;
+  border: 1px solid #999AA2;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 35px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+/* line 58, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-container > div span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  color: white;
+}
+
+/* line 70, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-container > div:not(.services-header):hover {
+  transform: translateY(-8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* line 76, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-container > div h2 {
+  margin: 10px 0 18px;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+/* line 82, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.services-container > div p {
+  margin: 0 0 28px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* line 88, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.reg-btn {
+  border: none;
+  padding: 14px 24px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* line 98, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.consultancy-icon {
+  background: #67809f;
+}
+
+/* line 102, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.consultancy-service .reg-btn {
+  background: #f7b322;
+}
+
+/* line 106, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.it-icon,
+.it-service .reg-btn {
+  background: #4183d7;
+}
+
+/* line 112, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.marketing-icon,
+.marketing-service .reg-btn {
+  background: #4caf50;
+}
+
+/* line 117, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.telecoms-icon,
+.telecoms-service .reg-btn {
+  background: #ce4125;
+}
+
+/* line 122, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.web-icon,
+.web-service .reg-btn {
+  background: #926fb1;
+}
+
+/* line 127, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.security-icon,
+.security-service .reg-btn {
+  background: #f5255a;
+}
+
+/* line 132, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
+.developer-icon,
+.developer-service .reg-btn {
+  background: #ce4125;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -409,11 +409,16 @@ input[type="search"] {
 }
 
 /* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
-.main-carousel {
-  height: 500px;
+.main-carousel input {
+  display: none;
 }
 
 /* line 5, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+.main-carousel {
+  height: 550px;
+}
+
+/* line 9, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
 .slides {
   display: flex;
   position: relative;
@@ -421,9 +426,11 @@ input[type="search"] {
   height: 100%;
 }
 
-/* line 12, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+/* line 16, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
 .slide {
+  width: 100%;
   height: 100%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   padding: 60px 10% 20px;
@@ -434,73 +441,128 @@ input[type="search"] {
   visibility: hidden;
 }
 
-/* line 24, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
-.slide.active {
+/* line 30, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+#slide1:checked ~ .slides .slide:nth-child(1),
+#slide2:checked ~ .slides .slide:nth-child(2),
+#slide3:checked ~ .slides .slide:nth-child(3),
+#slide4:checked ~ .slides .slide:nth-child(4),
+#slide5:checked ~ .slides .slide:nth-child(5),
+#slide6:checked ~ .slides .slide:nth-child(6),
+#slide7:checked ~ .slides .slide:nth-child(7) {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 29, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+/* line 41, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
 .slide-content {
-  margin: auto auto;
-  max-width: 700px;
   color: white;
 }
 
-/* line 35, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+/* line 45, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
 .slide-content h1 {
-  font-size: 48px;
+  max-width: 1000px;
+  font-size: 64px;
   line-height: 1.08;
   font-weight: 800;
   margin-bottom: 1.5rem;
 }
 
-/* line 42, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+/* line 53, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
 .slide-content p {
-  font-size: 18px;
+  max-width: 700px;
+  font-size: 27px;
   line-height: 1.5;
   font-weight: 600;
   margin-bottom: 2rem;
 }
 
-/* line 49, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+/* line 61, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
 .slide-btn {
   display: inline-block;
   gap: 14x;
   padding: 16px 28px;
-  background: #b88ad9;
   color: white;
   text-decoration: none;
   font-weight: 700;
   border-radius: 4px;
 }
 
-/* line 60, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+/* line 71, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+.slide-btn:hover {
+  filter: brightness(0.95);
+}
+
+/* line 75, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+#slide1:checked ~ .slides .slide:nth-child(1) .slide-btn {
+  background: #926fb1;
+}
+
+/* line 79, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+#slide2:checked ~ .slides .slide:nth-child(2) .slide-btn {
+  background: #f7b322;
+}
+
+/* line 83, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+#slide3:checked ~ .slides .slide:nth-child(3) .slide-btn {
+  background: #4183d7;
+}
+
+/* line 87, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+#slide4:checked ~ .slides .slide:nth-child(4) .slide-btn {
+  background: #4caf50;
+}
+
+/* line 91, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+#slide5:checked ~ .slides .slide:nth-child(5) .slide-btn {
+  background: #ce4125;
+}
+
+/* line 95, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+#slide6:checked ~ .slides .slide:nth-child(6) .slide-btn {
+  background: #926fb1;
+}
+
+/* line 99, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+#slide7:checked ~ .slides .slide:nth-child(7) .slide-btn {
+  background: #f5255a;
+}
+
+/* line 103, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
 .slide-btn:hover {
   background-color: #a373ca;
 }
 
-/* line 64, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+/* line 107, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
 .dots {
+  position: absolute;
+  bottom: 115px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  gap: 12px;
+  z-index: 2;
+  gap: 20px;
   margin-top: auto;
 }
 
-/* line 71, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+/* line 118, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
 .dot {
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   border: none;
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
-/* line 80, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
-.dot.active {
-  background-color: white;
+/* line 127, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */
+#slide1:checked ~ .dots label[for="slide1"],
+#slide2:checked ~ .dots label[for="slide2"],
+#slide3:checked ~ .dots label[for="slide3"],
+#slide4:checked ~ .dots label[for="slide4"],
+#slide5:checked ~ .dots label[for="slide5"],
+#slide6:checked ~ .dots label[for="slide6"],
+#slide7:checked ~ .dots label[for="slide7"] {
+  background: white;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -84,8 +84,22 @@
         </header>
 
         <div class="main-carousel">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+            <input type="radio" name="slide" id="slide6">
+            <input type="radio" name="slide" id="slide7">
+
             <div class="slides">
-                <div class="slide active" style="background-image: url('img/main-carousel-1.webp');">
+                <div class="slide active" style="background-image: linear-gradient(
+                        to right,
+                        rgba(0, 0, 0, 0.75) 0%,
+                        rgba(0, 0, 0, 0.5) 20%,
+                        rgba(0, 0, 0, 0.2) 30%,
+                        rgba(0, 0, 0, 0) 40%),
+                        url('img/main-carousel-1.webp');">
                     <div class="slide-content">
                         <h1>The East Of England's Leading Technology Company</h1>
                         <p>Performance-driven digital and technology services with complete transparency.</p>
@@ -93,42 +107,78 @@
                     </div>
                 </div>
 
-                <div class="slide" style="background-image: url('img/main-carousel-2.webp');">
+                <div class="slide" style="background-image:linear-gradient(
+                        to right,
+                        rgba(0, 0, 0, 0.75) 0%,
+                        rgba(0, 0, 0, 0.5) 20%,
+                        rgba(0, 0, 0, 0.2) 30%,
+                        rgba(0, 0, 0, 0) 40%),
+                        url('img/main-carousel-2.webp');">
                     <div class="slide-content">
                         <h1 class="heading">Bespoke Software</h1>
                         <p class="description">Delivering expert bespoke software solutions across a range of industries</p>
                         <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('img/main-carousel-3.webp');">
+                <div class="slide" style="background-image:linear-gradient(
+                        to right,
+                        rgba(0, 0, 0, 0.75) 0%,
+                        rgba(0, 0, 0, 0.5) 20%,
+                        rgba(0, 0, 0, 0.2) 30%,
+                        rgba(0, 0, 0, 0) 40%),
+                        url('img/main-carousel-3.webp');">
                     <div class="slide-content">
                         <h1 class="heading">IT Support</h1>
                         <p class="description">Fast and cost-effective IT support services for your business.</p>
                         <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('img/main-carousel-4.webp');">
+                <div class="slide" style="background-image:linear-gradient(
+                        to right,
+                        rgba(0, 0, 0, 0.75) 0%,
+                        rgba(0, 0, 0, 0.5) 20%,
+                        rgba(0, 0, 0, 0.2) 30%,
+                        rgba(0, 0, 0, 0) 40%),
+                        url('img/main-carousel-4.webp');">
                     <div class="slide-content">
                         <h1 class="heading">Digital Marketing</h1>
                         <p class="description">Generating your new business through results-driven marketing activities</p>
                         <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('img/main-carousel-5.webp');">
+                <div class="slide" style="background-image:linear-gradient(
+                        to right,
+                        rgba(0, 0, 0, 0.75) 0%,
+                        rgba(0, 0, 0, 0.5) 20%,
+                        rgba(0, 0, 0, 0.2) 30%,
+                        rgba(0, 0, 0, 0) 40%),
+                        url('img/main-carousel-5.webp');">
                     <div class="slide-content">
                         <h1 class="heading">Telecoms Services</h1>
                         <p class="description">A new approach to connectivity, see how we can help your business.</p>
                         <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('img/main-carousel-6.webp');">
+                <div class="slide" style="background-image:linear-gradient(
+                        to right,
+                        rgba(0, 0, 0, 0.75) 0%,
+                        rgba(0, 0, 0, 0.5) 20%,
+                        rgba(0, 0, 0, 0.2) 30%,
+                        rgba(0, 0, 0, 0) 40%),
+                        url('img/main-carousel-6.webp');">
                     <div class="slide-content">
                         <h1 class="heading">Web Design</h1>
                         <p class="description">For businesses looking to make a strong and effective first impression.</p>
                         <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('img/main-carousel-7.webp');">
+                <div class="slide" style="background-image:linear-gradient(
+                        to right,
+                        rgba(0, 0, 0, 0.75) 0%,
+                        rgba(0, 0, 0, 0.5) 25%,
+                        rgba(0, 0, 0, 0.2) 50%,
+                        rgba(0, 0, 0, 0) 75%),
+                        url('img/main-carousel-7.webp');">
                     <div class="slide-content">
                         <h1 class="heading">Cyber Security</h1>
                         <p class="description">Keeping businesses and their customers sensitive information protected.</p>
@@ -136,16 +186,16 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="dots">
-            <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
-            <button class="dot" data-slide="1" onclick="showSlide(1)" aria-label="Go to slide 2"></button>
-            <button class="dot" data-slide="2" onclick="showSlide(2)" aria-label="Go to slide 3"></button>
-            <button class="dot" data-slide="3" onclick="showSlide(3)" aria-label="Go to slide 4"></button>
-            <button class="dot" data-slide="4" onclick="showSlide(4)" aria-label="Go to slide 5"></button>
-            <button class="dot" data-slide="5" onclick="showSlide(5)" aria-label="Go to slide 6"></button>
-            <button class="dot" data-slide="6" onclick="showSlide(6)" aria-label="Go to slide 7"></button>
+            <div class="dots">
+                <label class="dot active" for="slide1"></label>
+                <label class="dot" for="slide2"></label>
+                <label class="dot" for="slide3"></label>
+                <label class="dot" for="slide4"></label>
+                <label class="dot" for="slide5"></label>
+                <label class="dot" for="slide6"></label>
+                <label class="dot" for="slide7"></label>
+            </div>
         </div>
 
         <div class="services">

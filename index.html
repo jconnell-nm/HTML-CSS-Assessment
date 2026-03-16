@@ -84,54 +84,68 @@
         </header>
 
         <div class="main-carousel">
-            <input type="radio" name="slide" id="slide1" checked>
-            <input type="radio" name="slide" id="slide2">
-            <input type="radio" name="slide" id="slide3">
-            <input type="radio" name="slide" id="slide4">
-            <input type="radio" name="slide" id="slide5">
-            <input type="radio" name="slide" id="slide6">
-            <input type="radio" name="slide" id="slide7">
-
             <div class="slides">
-                <img class="slide1" src="img/main-carousel-1.webp">
-                <h2>The East Of England's Leading Technology Company</h2>
-                <h4>Performance-driven digital and technology services with complete transparency.</h4>
-                <button onclick="window.scrollTo(0,0)" class="reg-btn">WHY CHOOSE US? &#8594;</button>
-                <img class="slide2" src="img/main-carousel-2.webp">
-                <h2>Bespoke Software</h2>
-                <h4>Delivering expert bespoke software solutions across a range of industries</h4>
-                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
-                <img class="slide3" src="img/main-carousel-3.webp">
-                <h2>IT Support</h2>
-                <h4>Fast and cost-effective IT support services for your business.</h4>
-                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
-                <img class="slide4" src="img/main-carousel-4.webp">
-                <h2>Digital Marketing</h2>
-                <h4>Generating your new business through results-driven marketing activities</h4>
-                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
-                <img class="slide5" src="img/main-carousel-5.webp">
-                <h2>Telecoms Services</h2>
-                <h4>A new approach to connectivity, see how we can help your business.</h4>
-                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
-                <img class="slide6" src="img/main-carousel-6.webp"> 
-                <h2>Web Design</h2>
-                <h4>For businesses looking to make a strong and effective first impression.</h4>
-                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
-                <img class="slide7" src="img/main-carousel-7.webp">
-                <h2>Cyber Security</h2>
-                <h4>Keeping businesses and their customers sensitive information protected.</h4>
-                <button onclick="window.scrollTo(0,0)" class="reg-btn">FIND OUT MORE &#8594;</button>
+                <div class="slide active" style="background-image: url('img/main-carousel-1.webp');">
+                    <div class="slide-content">
+                        <h1>The East Of England's Leading Technology Company</h1>
+                        <p>Performance-driven digital and technology services with complete transparency.</p>
+                        <a href="#" class="slide-btn">WHY CHOOSE US? &#8594;</a>
+                    </div>
+                </div>
+
+                <div class="slide" style="background-image: url('img/main-carousel-2.webp');">
+                    <div class="slide-content">
+                        <h1 class="heading">Bespoke Software</h1>
+                        <p class="description">Delivering expert bespoke software solutions across a range of industries</p>
+                        <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/main-carousel-3.webp');">
+                    <div class="slide-content">
+                        <h1 class="heading">IT Support</h1>
+                        <p class="description">Fast and cost-effective IT support services for your business.</p>
+                        <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/main-carousel-4.webp');">
+                    <div class="slide-content">
+                        <h1 class="heading">Digital Marketing</h1>
+                        <p class="description">Generating your new business through results-driven marketing activities</p>
+                        <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/main-carousel-5.webp');">
+                    <div class="slide-content">
+                        <h1 class="heading">Telecoms Services</h1>
+                        <p class="description">A new approach to connectivity, see how we can help your business.</p>
+                        <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/main-carousel-6.webp');">
+                    <div class="slide-content">
+                        <h1 class="heading">Web Design</h1>
+                        <p class="description">For businesses looking to make a strong and effective first impression.</p>
+                        <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('img/main-carousel-7.webp');">
+                    <div class="slide-content">
+                        <h1 class="heading">Cyber Security</h1>
+                        <p class="description">Keeping businesses and their customers sensitive information protected.</p>
+                        <a href="#" class="slide-btn">LEARN MORE &#8594;</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="buttons">
-            <button onclick="showSlide(0)"></button>
-            <button onclick="showSlide(1)"></button>
-            <button onclick="showSlide(2)"></button>
-            <button onclick="showSlide(3)"></button>
-            <button onclick="showSlide(4)"></button>
-            <button onclick="showSlide(5)"></button>
-            <button onclick="showSlide(6)"></button>
+        <div class="dots">
+            <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="dot" data-slide="1" onclick="showSlide(1)" aria-label="Go to slide 2"></button>
+            <button class="dot" data-slide="2" onclick="showSlide(2)" aria-label="Go to slide 3"></button>
+            <button class="dot" data-slide="3" onclick="showSlide(3)" aria-label="Go to slide 4"></button>
+            <button class="dot" data-slide="4" onclick="showSlide(4)" aria-label="Go to slide 5"></button>
+            <button class="dot" data-slide="5" onclick="showSlide(5)" aria-label="Go to slide 6"></button>
+            <button class="dot" data-slide="6" onclick="showSlide(6)" aria-label="Go to slide 7"></button>
         </div>
 
         <div class="services">

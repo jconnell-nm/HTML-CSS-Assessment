@@ -1,65 +1,82 @@
 .main-carousel {
-    width: 500px;
-    position: relative;
+    height: 500px;
 }
 
 .slides {
+    display: flex;
     position: relative;
     width: 100%;
-    height: 300px;
-}
-
-.slides img {
-    position: absolute;
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: none;
 }
 
-.main-carousel input[type="radio"] {
-    display: none;
+.slide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 10% 20px;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
 }
 
-input#slide1:checked ~ .slides .slide1 {
-    display: block;
+.slide.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-input#slide2:checked ~ .slides .slide2 {
-    display: block;
+.slide-content {
+    margin: auto auto;
+    max-width: 700px;
+    color: white;
 }
 
-input#slide3:checked ~ .slides .slide3 {
-    display: block;
+.slide-content h1 {
+    font-size: 48px;
+    line-height: 1.08;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
 }
 
-input#slide4:checked ~ .slides .slide4 {
-    display: block;
+.slide-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
 
-input#slide5:checked ~ .slides .slide5 {
-    display: block;
-}
-
-input#slide6:checked ~ .slides .slide6 {
-    display: block;
-}
-
-input#slide7:checked ~ .slides .slide7 {
-    display: block;
-}
-
-.buttons {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.buttons label {
+.slide-btn {
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: #bbb;
+    gap: 14x;
+    padding: 16px 28px;
+    background: #b88ad9;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.slide-btn:hover {
+    background-color: #a373ca;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    margin: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
 }

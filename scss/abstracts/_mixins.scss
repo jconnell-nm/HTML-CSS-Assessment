@@ -1,0 +1,22 @@
+@mixin slider() {
+    width: 100%;
+    background-color: $off-white;
+    padding: 0 20px 50px;
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .slider {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .slider-track {
+        display: flex;
+        gap: 80px;
+        width: max-content;
+        animation: scroll 20s steps(6) infinite;
+    }
+}

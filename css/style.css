@@ -283,6 +283,140 @@ input[type="search"] {
   color: white;
 }
 
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+footer {
+  background-color: #202330;
+  color: white;
+}
+
+/* line 6, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+footer p {
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* line 12, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+footer p a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 17, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* line 22, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.contact-us {
+  background-color: #333645;
+  color: white;
+  margin: 0;
+  padding: 50px 20px;
+}
+
+/* line 29, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.contact-us a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 34, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.contact-us a:hover {
+  text-decoration: underline;
+}
+
+/* line 38, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* line 47, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.footer-logo {
+  max-width: 320px;
+  width: 100%;
+  display: block;
+  margin-bottom: 35px;
+}
+
+/* line 54, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.contact-us h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 25px;
+}
+
+/* line 60, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.footer-nav ul,
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 67, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* line 74, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* line 78, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* line 84, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.social-links li {
+  margin: 0;
+}
+
+/* line 88, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.social-links a {
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  background: #202330;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* line 99, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.social-links .fb-btn:hover {
+  background-color: #1877F2;
+}
+
+/* line 103, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.social-links .in-btn:hover {
+  background-color: #0A66C2;
+}
+
+/* line 107, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.social-links .x-btn:hover {
+  background-color: #1DA1F2;
+}
+
+/* line 111, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
+.social-links .ig-btn:hover {
+  background-color: #E4405F;
+}
+
 /* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
 .title-bar {
   display: flex;
@@ -721,61 +855,103 @@ input[type="search"] {
   background: #ce4125;
 }
 
-/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_award-slider.scss */
 .view-our-work {
   width: 100%;
   background-color: #f4f4f4;
-  padding-bottom: 50px;
+  padding: 0 20px 50px;
 }
 
-/* line 7, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
-.container {
+/* line 6, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/abstracts/_mixins.scss */
+.view-our-work .container {
   width: 100%;
   margin: 0 auto;
 }
 
-/* line 12, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
-.slider {
+/* line 11, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/abstracts/_mixins.scss */
+.view-our-work .slider {
   overflow: hidden;
   width: 100%;
 }
 
-/* line 17, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
-.logo {
+/* line 16, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/abstracts/_mixins.scss */
+.view-our-work .slider-track {
+  display: flex;
+  gap: 80px;
+  width: max-content;
+  animation: scroll 20s steps(6) infinite;
+}
+
+/* line 5, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_award-slider.scss */
+.view-our-work .slider-item {
   position: relative;
   height: 75px;
 }
 
-/* line 22, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
-.logo img {
+/* line 10, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_award-slider.scss */
+.view-our-work .slider-item img {
   height: 100%;
   display: block;
 }
 
-/* line 27, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
-.logo-colour {
+/* line 15, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_award-slider.scss */
+.view-our-work .award-colour {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
 
-/* line 34, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
-.logo:hover .logo-colour {
+/* line 22, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_award-slider.scss */
+.view-our-work .slider-item:hover .award-colour {
   opacity: 1;
 }
 
-/* line 38, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
-.work-slides {
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_company-slider.scss */
+.company-slider {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 0 20px 50px;
+}
+
+/* line 6, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/abstracts/_mixins.scss */
+.company-slider .container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 11, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/abstracts/_mixins.scss */
+.company-slider .slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 16, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/abstracts/_mixins.scss */
+.company-slider .slider-track {
   display: flex;
-  gap: 40px;
+  gap: 80px;
   width: max-content;
   animation: scroll 20s steps(6) infinite;
 }
 
-/* line 44, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
-.work-slides img {
-  height: 75px;
+/* line 5, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_company-slider.scss */
+.company-slider img {
+  height: 65px;
+  filter: grayscale(100%);
+}
+
+/* line 10, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_company-slider.scss */
+.company-slider img:hover {
+  filter: grayscale(0%);
 }
 
 @keyframes scroll {
@@ -869,13 +1045,13 @@ p {
 }
 
 /* line 70, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
-a {
+.welcome a {
   color: white;
   text-decoration: none;
 }
 
 /* line 75, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
-a:hover {
+.welcome a:hover {
   text-decoration: underline;
 }
 

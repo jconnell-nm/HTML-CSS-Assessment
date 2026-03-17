@@ -1,0 +1,33 @@
+.view-our-work {
+    @include slider();
+}
+
+.view-our-work .slider-item {
+    position: relative;
+    height: 75px;
+}
+
+.view-our-work .slider-item img {
+    height: 100%;
+    display: block;
+}
+
+.view-our-work .award-colour {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.view-our-work .slider-item:hover .award-colour {
+    opacity: 1;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

@@ -67,12 +67,12 @@ p {
     filter: brightness(0.9)
 }
 
-a {
+.welcome a {
     color: white;
     text-decoration: none;
 }
 
-a:hover {
+.welcome a:hover {
     text-decoration: underline;
 }
 

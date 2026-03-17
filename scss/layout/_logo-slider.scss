@@ -1,16 +1,49 @@
 .view-our-work {
+    width: 100%;
+    background-color: $off-white;
+    padding-bottom: 50px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slider {
     overflow: hidden;
     width: 100%;
+}
+
+.logo {
+    position: relative;
+    height: 75px;
+}
+
+.logo img {
+    height: 100%;
+    display: block;
+}
+
+.logo-colour {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.logo:hover .logo-colour {
+    opacity: 1;
 }
 
 .work-slides {
     display: flex;
     gap: 40px;
-    animation: scroll 20s linear infinite;
-}
+    width: max-content;
+    animation: scroll 20s steps(6) infinite;
 
-.work-slides img {
-    height: 75px;
+    img {
+        height: 75px;
+    }
 }
 
 @keyframes scroll {

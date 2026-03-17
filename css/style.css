@@ -676,7 +676,7 @@ input[type="search"] {
 }
 
 /* line 98, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
-.consultancy-icon {
+.consultancy-service .consultancy-icon {
   background: #67809f;
 }
 
@@ -686,55 +686,94 @@ input[type="search"] {
 }
 
 /* line 106, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
-.it-icon,
+.it-service .it-icon,
 .it-service .reg-btn {
   background: #4183d7;
 }
 
 /* line 112, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
-.marketing-icon,
+.marketing-service .marketing-icon,
 .marketing-service .reg-btn {
   background: #4caf50;
 }
 
 /* line 117, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
-.telecoms-icon,
+.telecoms-service .telecoms-icon,
 .telecoms-service .reg-btn {
   background: #ce4125;
 }
 
 /* line 122, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
-.web-icon,
+.web-service .web-icon,
 .web-service .reg-btn {
   background: #926fb1;
 }
 
 /* line 127, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
-.security-icon,
+.security-service .security-icon,
 .security-service .reg-btn {
   background: #f5255a;
 }
 
 /* line 132, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_services.scss */
-.developer-icon,
+.developer-service .developer-icon,
 .developer-service .reg-btn {
   background: #ce4125;
 }
 
 /* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
 .view-our-work {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding-bottom: 50px;
+}
+
+/* line 7, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 12, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+.slider {
   overflow: hidden;
   width: 100%;
 }
 
-/* line 6, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+/* line 17, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+.logo {
+  position: relative;
+  height: 75px;
+}
+
+/* line 22, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+.logo img {
+  height: 100%;
+  display: block;
+}
+
+/* line 27, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+.logo-colour {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* line 34, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+.logo:hover .logo-colour {
+  opacity: 1;
+}
+
+/* line 38, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
 .work-slides {
   display: flex;
   gap: 40px;
-  animation: scroll 20s linear infinite;
+  width: max-content;
+  animation: scroll 20s steps(6) infinite;
 }
 
-/* line 12, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
+/* line 44, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_logo-slider.scss */
 .work-slides img {
   height: 75px;
 }
@@ -746,6 +785,113 @@ input[type="search"] {
   to {
     transform: translateX(-50%);
   }
+}
+
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.welcome {
+  background: #333645;
+  color: white;
+  padding: 25px;
+  padding-bottom: 50px;
+}
+
+/* line 8, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+}
+
+/* line 15, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.left, .right {
+  flex: 1;
+}
+
+/* line 19, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+h1, h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+/* line 24, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* line 30, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 34, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.quote {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* line 40, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.author {
+  color: grey;
+}
+
+/* line 44, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.stars {
+  color: gold;
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+/* line 50, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* line 57, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.btn {
+  border: none;
+  padding: 18px 28px;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* line 66, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+/* line 70, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 75, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 79, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.dark {
+  background: #202330;
+}
+
+/* line 83, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.blue {
+  background: #4183d7;
+}
+
+/* line 87, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_welcome.scss */
+.green {
+  background: #4caf50;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -28,7 +28,7 @@
 
 .services {
     padding: 50px 150px;
-    background: #f4f4f4;
+    background: $off-white;
 }
 
 .services-container {
@@ -95,7 +95,7 @@
     cursor: pointer;
 }
 
-.consultancy-icon {
+.consultancy-service .consultancy-icon {
     background: $steel-blue;
 }
 
@@ -103,33 +103,33 @@
     background: $yellow;
 }
 
-.it-icon,
+.it-service .it-icon,
 .it-service .reg-btn {
     background: $light-blue;
 }
 
 
-.marketing-icon,
+.marketing-service .marketing-icon,
 .marketing-service .reg-btn {
     background: $light-green;
 }
 
-.telecoms-icon,
+.telecoms-service .telecoms-icon,
 .telecoms-service .reg-btn {
     background: $dark-red;
 }
 
-.web-icon,
+.web-service .web-icon,
 .web-service .reg-btn {
     background: $purple;
 }
 
-.security-icon,
+.security-service .security-icon,
 .security-service .reg-btn {
     background: $light-red;
 }
 
-.developer-icon,
+.developer-service .developer-icon,
 .developer-service .reg-btn {
     background: $dark-red;
 }

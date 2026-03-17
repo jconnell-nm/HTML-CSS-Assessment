@@ -1,0 +1,89 @@
+.welcome {
+    background: $dark-blue;
+    color: white;
+    padding: 25px;
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+h1, h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.quote {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.author {
+    color: grey;
+}
+
+.stars {
+    color: gold;
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn {
+    border: none;
+    padding: 18px 28px;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(0.9)
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.dark {
+    background: $midnight-blue;
+}
+
+.blue {
+    background: $light-blue;
+}
+
+.green {
+    background: $light-green;
+}

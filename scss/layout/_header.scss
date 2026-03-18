@@ -12,7 +12,8 @@
 
 // Service panel
 
-.serv_panel {
+.services_nav {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -27,35 +28,37 @@
     max-width: 100%;
 } 
 
-.serv_list {
+.services-nav__list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
-.serv_list li {
+.services-nav__item {
+    position: static;
     flex: 1;
-    padding: .3rem;
-    padding-bottom: 0.8rem;
+    padding: 0;
 }
 
-.serv_list li a {
+.services-nav__link {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
     text-decoration: none;
     color: inherit;
     height: 100%;
+    padding: 1rem 0.3rem 0.8rem;
+    z-index: 2;
 }
 
-.serv_list .icon {
+.services-nav__list .icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +68,7 @@
     line-height: 1;
 }
 
-.serv_list .small {
+.services-nav__list .small {
     display: block;
     margin-bottom: 0.1rem;
     font-size: 0.7rem;
@@ -74,37 +77,221 @@
     line-height: 1.1;
 }
 
-.serv_list .large {
+.services-nav__list .large {
     display: block;
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1;
 }
 
-.consultancy-tab:hover {
+.services-nav__list .consultancy-icon {
+    color: $steel-blue;
+}
+
+.services-nav__list .it-icon {
+    color: $light-blue;
+}
+
+.services-nav__list .marketing-icon {
+    color: $light-green;
+}
+
+.services-nav__list .telecoms-icon {
+    color: $dark-red;
+}
+
+.services-nav__list .web-icon {
+    color: $purple;
+}
+
+.services-nav__list .security-icon {
+    color: $light-red;
+}
+
+.services-nav__list .developer-icon {
+    color: $dark-red;
+}
+
+.services-nav__list li:hover .icon {
+    color: white;
+}
+
+.consultancy-tab:hover > .services-nav__link,
+.consultancy-tab:focus-within > .services-nav__link {
     background-color: $consultancy-color;
 }
 
-.it-tab:hover {
+.it-tab:hover > .services-nav__link,
+.it-tab:focus-within > .services-nav__link {
     background-color: $it-color;
 }
 
-.marketing-tab:hover {
+.marketing-tab:hover > .services-nav__link,
+.marketing-tab:focus-within > .services-nav__link {
     background-color: $marketing-color;
 }
 
-.telecoms-tab:hover {
+.telecoms-tab:hover > .services-nav__link,
+.telecoms-tab:focus-within > .services-nav__link {
     background-color: $telecoms-color;
 }
 
-.web-tab:hover {
+.web-tab:hover > .services-nav__link,
+.web-tab:focus-within > .services-nav__link {
     background-color: $web-color;
 }
 
-.security-tab:hover {
+.security-tab:hover > .services-nav__link,
+.security-tab:focus-within > .services-nav__link {
     background-color: $security-color;
 }
 
-.developer-tab:hover {
+.developer-tab:hover > .services-nav__link,
+.developer-tab:focus-within > .services-nav__link {
     background-color: $developer-color;
+}
+
+.services-nav__link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 30px solid transparent;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.consultancy-tab:hover > .services-nav__link::after,
+.consultancy-tab:focus-within > .services-nav__link::after {
+    border-top-color: $consultancy-color;
+    opacity: 1;
+}
+
+.it-tab:hover > .services-nav__link::after,
+.it-tab:focus-within > .services-nav__link::after {
+    border-top-color: $it-color;
+    opacity: 1;
+}
+
+.marketing-tab:hover > .services-nav__link::after,
+.marketing-tab:focus-within > .services-nav__link::after {
+    border-top-color: $marketing-color;
+    opacity: 1;
+}
+
+.telecoms-tab:hover > .services-nav__link::after,
+.telecoms-tab:focus-within > .services-nav__link::after {
+    border-top-color: $telecoms-color;
+    opacity: 1;
+}
+
+.web-tab:hover > .services-nav__link::after,
+.web-tab:focus-within > .services-nav__link::after {
+    border-top-color: $web-color;
+    opacity: 1;
+}
+
+.security-tab:hover > .services-nav__link::after,
+.security-tab:focus-within > .services-nav__link::after {
+    border-top-color: $security-color;
+    opacity: 1;
+}
+
+.developer-tab:hover > .services-nav__link::after,
+.developer-tab:focus-within > .services-nav__link::after {
+    border-top-color: $developer-color;
+    opacity: 1;
+}
+
+.services-nav__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    color: white;
+    text-transform: none;
+    z-index: 1;
+}
+
+.services-nav__item:hover .services-nav__dropdown,
+.services-nav__item:focus-within .services-nav__dropdown {
+    display: block;
+}
+
+.consultancy-dropdown {
+    background-color: darken($consultancy-color, 10%);
+}
+
+.it-dropdown {
+    background-color: darken($it-color, 10%);
+}
+
+.marketing-dropdown {
+    background-color: darken($marketing-color, 10%);
+}
+
+.telecoms-dropdown {
+    background-color: darken($telecoms-color, 10%);
+}
+
+.web-dropdown {
+    background-color: darken($web-color, 10%);
+}
+
+.security-dropdown {
+    background-color: darken($security-color, 10%);
+}
+
+.developer-dropdown {
+    background-color: darken($developer-color, 10%);
+}
+
+.services-nav__dropdown-inner {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2.5rem 3rem 3rem;
+}
+
+.services-nav__dropdown-inner h2 {
+    margin: 0 0 2.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: none;
+}
+
+.services-nav__dropdown-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 2rem 4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.services-nav__dropdown-list li {
+    padding: 0;
+}
+
+.services-nav__dropdown-list a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    text-decoration: none;
+    gap: 1rem;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    min-height: auto;
+    padding: 0;
+}
+
+.services-nav__dropdown-list a:hover,
+.services-nav__dropdown-list a:focus-visible {
+    text-decoration: underline;
 }

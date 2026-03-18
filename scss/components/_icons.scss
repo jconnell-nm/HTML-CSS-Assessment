@@ -93,36 +93,3 @@
   font-family: 'icomoon';
   display: inline-block;
 }
-
-// Set colour of icons in services panel
-.serv_list .consultancy-icon {
-    color: $steel-blue;
-}
-
-.serv_list .it-icon {
-    color: $light-blue;
-}
-
-.serv_list .marketing-icon {
-    color: $light-green;
-}
-
-.serv_list .telecoms-icon {
-    color: $dark-red;
-}
-
-.serv_list .web-icon {
-    color: $purple;
-}
-
-.serv_list .security-icon {
-    color: $light-red;
-}
-
-.serv_list .developer-icon {
-    color: $dark-red;
-}
-
-.serv_list li:hover .icon {
-    color: white;
-}

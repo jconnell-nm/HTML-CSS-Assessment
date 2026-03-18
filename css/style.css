@@ -243,46 +243,6 @@ input[type="search"] {
   display: inline-block;
 }
 
-/* line 98, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
-.serv_list .consultancy-icon {
-  color: #67809f;
-}
-
-/* line 102, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
-.serv_list .it-icon {
-  color: #4183d7;
-}
-
-/* line 106, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
-.serv_list .marketing-icon {
-  color: #4caf50;
-}
-
-/* line 110, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
-.serv_list .telecoms-icon {
-  color: #ce4125;
-}
-
-/* line 114, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
-.serv_list .web-icon {
-  color: #926fb1;
-}
-
-/* line 118, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
-.serv_list .security-icon {
-  color: #f5255a;
-}
-
-/* line 122, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
-.serv_list .developer-icon {
-  color: #ce4125;
-}
-
-/* line 126, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/components/_icons.scss */
-.serv_list li:hover .icon {
-  color: white;
-}
-
 /* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_footer.scss */
 footer {
   background-color: #202330;
@@ -432,7 +392,8 @@ footer p a:hover {
 }
 
 /* line 15, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.serv_panel {
+.services_nav {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -447,39 +408,41 @@ footer p a:hover {
   max-width: 100%;
 }
 
-/* line 30, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.serv_list {
+/* line 31, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-/* line 40, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.serv_list li {
+/* line 41, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__item {
+  position: static;
   flex: 1;
-  padding: .3rem;
-  padding-bottom: 0.8rem;
+  padding: 0;
 }
 
-/* line 46, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.serv_list li a {
+/* line 47, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__link {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
   text-decoration: none;
   color: inherit;
   height: 100%;
+  padding: 1rem 0.3rem 0.8rem;
+  z-index: 2;
 }
 
-/* line 58, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.serv_list .icon {
+/* line 61, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -489,8 +452,8 @@ footer p a:hover {
   line-height: 1;
 }
 
-/* line 68, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.serv_list .small {
+/* line 71, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .small {
   display: block;
   margin-bottom: 0.1rem;
   font-size: 0.7rem;
@@ -499,47 +462,262 @@ footer p a:hover {
   line-height: 1.1;
 }
 
-/* line 77, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.serv_list .large {
+/* line 80, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .large {
   display: block;
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1;
 }
 
-/* line 84, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.consultancy-tab:hover {
+/* line 87, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .consultancy-icon {
+  color: #67809f;
+}
+
+/* line 91, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .it-icon {
+  color: #4183d7;
+}
+
+/* line 95, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .marketing-icon {
+  color: #4caf50;
+}
+
+/* line 99, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .telecoms-icon {
+  color: #ce4125;
+}
+
+/* line 103, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .web-icon {
+  color: #926fb1;
+}
+
+/* line 107, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .security-icon {
+  color: #f5255a;
+}
+
+/* line 111, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list .developer-icon {
+  color: #ce4125;
+}
+
+/* line 115, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__list li:hover .icon {
+  color: white;
+}
+
+/* line 119, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.consultancy-tab:hover > .services-nav__link,
+.consultancy-tab:focus-within > .services-nav__link {
   background-color: #67809f;
 }
 
-/* line 88, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.it-tab:hover {
+/* line 124, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.it-tab:hover > .services-nav__link,
+.it-tab:focus-within > .services-nav__link {
   background-color: #4183d7;
 }
 
-/* line 92, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.marketing-tab:hover {
+/* line 129, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.marketing-tab:hover > .services-nav__link,
+.marketing-tab:focus-within > .services-nav__link {
   background-color: #4caf50;
 }
 
-/* line 96, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.telecoms-tab:hover {
+/* line 134, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.telecoms-tab:hover > .services-nav__link,
+.telecoms-tab:focus-within > .services-nav__link {
   background-color: #ce4125;
 }
 
-/* line 100, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.web-tab:hover {
+/* line 139, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.web-tab:hover > .services-nav__link,
+.web-tab:focus-within > .services-nav__link {
   background-color: #926fb1;
 }
 
-/* line 104, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.security-tab:hover {
+/* line 144, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.security-tab:hover > .services-nav__link,
+.security-tab:focus-within > .services-nav__link {
   background-color: #f5255a;
 }
 
-/* line 108, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
-.developer-tab:hover {
+/* line 149, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.developer-tab:hover > .services-nav__link,
+.developer-tab:focus-within > .services-nav__link {
   background-color: #ce4125;
+}
+
+/* line 154, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 30px solid transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* line 167, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.consultancy-tab:hover > .services-nav__link::after,
+.consultancy-tab:focus-within > .services-nav__link::after {
+  border-top-color: #67809f;
+  opacity: 1;
+}
+
+/* line 173, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.it-tab:hover > .services-nav__link::after,
+.it-tab:focus-within > .services-nav__link::after {
+  border-top-color: #4183d7;
+  opacity: 1;
+}
+
+/* line 179, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.marketing-tab:hover > .services-nav__link::after,
+.marketing-tab:focus-within > .services-nav__link::after {
+  border-top-color: #4caf50;
+  opacity: 1;
+}
+
+/* line 185, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.telecoms-tab:hover > .services-nav__link::after,
+.telecoms-tab:focus-within > .services-nav__link::after {
+  border-top-color: #ce4125;
+  opacity: 1;
+}
+
+/* line 191, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.web-tab:hover > .services-nav__link::after,
+.web-tab:focus-within > .services-nav__link::after {
+  border-top-color: #926fb1;
+  opacity: 1;
+}
+
+/* line 197, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.security-tab:hover > .services-nav__link::after,
+.security-tab:focus-within > .services-nav__link::after {
+  border-top-color: #f5255a;
+  opacity: 1;
+}
+
+/* line 203, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.developer-tab:hover > .services-nav__link::after,
+.developer-tab:focus-within > .services-nav__link::after {
+  border-top-color: #ce4125;
+  opacity: 1;
+}
+
+/* line 209, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  color: white;
+  text-transform: none;
+  z-index: 1;
+}
+
+/* line 220, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__item:hover .services-nav__dropdown,
+.services-nav__item:focus-within .services-nav__dropdown {
+  display: block;
+}
+
+/* line 225, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.consultancy-dropdown {
+  background-color: #526781;
+}
+
+/* line 229, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.it-dropdown {
+  background-color: #286abd;
+}
+
+/* line 233, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.marketing-dropdown {
+  background-color: #3d8b40;
+}
+
+/* line 237, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.telecoms-dropdown {
+  background-color: #a3331d;
+}
+
+/* line 241, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.web-dropdown {
+  background-color: #79539a;
+}
+
+/* line 245, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.security-dropdown {
+  background-color: #dd0a40;
+}
+
+/* line 249, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.developer-dropdown {
+  background-color: #a3331d;
+}
+
+/* line 253, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__dropdown-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2.5rem 3rem 3rem;
+}
+
+/* line 259, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__dropdown-inner h2 {
+  margin: 0 0 2.5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+/* line 267, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__dropdown-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 2rem 4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 276, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__dropdown-list li {
+  padding: 0;
+}
+
+/* line 280, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__dropdown-list a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  text-decoration: none;
+  gap: 1rem;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  min-height: auto;
+  padding: 0;
+}
+
+/* line 294, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_header.scss */
+.services-nav__dropdown-list a:hover,
+.services-nav__dropdown-list a:focus-visible {
+  text-decoration: underline;
 }
 
 /* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_main-carousel.scss */

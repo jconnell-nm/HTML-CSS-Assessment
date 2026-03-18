@@ -1070,4 +1070,180 @@ p {
   background: #4caf50;
 }
 
+/* line 1, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 150px 48px;
+  background-color: #f4f4f4;
+}
+
+/* line 8, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+/* line 16, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-header h2 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* line 22, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-header a {
+  color: #333645;
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* line 32, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 38px;
+  margin-bottom: 60px;
+}
+
+/* line 39, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: white;
+  border: 1px solid #999AA2;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 49, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+
+/* line 54, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__media {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 59, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* line 66, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__tag {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  background-color: #67809f;
+  color: white;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 78, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__tag--career {
+  background-color: #4183d7;
+}
+
+/* line 82, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 28px 38px 30px;
+}
+
+/* line 89, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__content h3 {
+  margin: 0 0 22px;
+  font-size: 1.1rem;
+  line-height: 1.45;
+  color: #67809f;
+}
+
+/* line 96, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__career h3 {
+  color: #4183d7;
+}
+
+/* line 100, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__content p {
+  margin: 0 0 28px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #999AA2;
+}
+
+/* line 107, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__button {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 16px 24px;
+  margin-bottom: 36px;
+  background-color: #f7b322;
+  color: white;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+/* line 118, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__career .news-card__button {
+  background-color: #4183d7;
+}
+
+/* line 122, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 28px;
+  border-top: 1px solid #999AA2;
+}
+
+/* line 131, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* line 139, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__meta strong,
+.news-card__meta span {
+  display: block;
+}
+
+/* line 144, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__meta strong {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #333645;
+}
+
+/* line 150, ../../../../../Users/jonathanconnell/Documents/HTML & CSS Assessment/scss/layout/_news.scss */
+.news-card__meta span {
+  font-size: 0.95rem;
+  color: #999AA2;
+}
+
 /*# sourceMappingURL=style.css.map */

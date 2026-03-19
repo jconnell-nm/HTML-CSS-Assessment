@@ -62,6 +62,8 @@ input[type="search"] {
 
 .search-btn {
     @extend .header-btn-sml;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     background: $grey;
     border: 2px solid $grey;
 }

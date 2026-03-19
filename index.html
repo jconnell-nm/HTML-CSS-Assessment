@@ -1,266 +1,272 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Full Service Digital Agency | Cambridgeshire &amp; Norfolk</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
-
     <body>
-        <header>
-            <div class="title-bar">
-                <img src="img/f-logo.webp">
-                <button class="support-btn">
-                    <span class="support-icon" aria-hidden="true"></span>
-                    SUPPORT
-                </button>
-                <button class="contact-btn">
-                    <span class="contact-icon" aria-hidden="true"></span>
-                    CONTACT
-                </button>
-                <form action="/search" method="get">
-                    <input type="search" placeholder="Search...">
-                    <button type="submit" class="search-btn">
-                        <span class="search-icon" aria-hidden="true"></span>
-                    </button>
-                </form>
+        <div class="page-layout">
+            <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
 
-                <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
-
-                <label for="sidebar-toggle" class="menu-trigger">
-                    <span class="sidebar-icon" aria-hidden="true"></span>
-                </label>
-
-                <label for="sidebar-toggle" class="sidebar-overlay"></label>
-
-                <aside class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
-                    <div class="mobile-sidebar__inner">
-                        <div class="mobile-sidebar__top">
-                            <label for="sidebar-toggle" class="mobile-sidebar__close">&times;</label>
-                        </div>
-
-                        <nav class="mobile-sidebar__nav">
-                            <div class="mobile-sidebar__section">
-                                <h3>Services</h3>
-                                <a href="#">Bespoke Software</a>
-                                <a href="#">IT Support</a>
-                                <a href="#">Digital Marketing</a>
-                                <a href="#">Telecoms Services</a>
-                                <a href="#">Web Design</a>
-                                <a href="#">Cyber Security</a>
-                            </div>
-
-                            <div class="mobile-sidebar__section">
-                                <h3>Our Work</h3>
-                                <a href="#">Case Studies</a>
-                                <a href="#">Our Digital Marketing Clients</a>
-                                <a href="#">Our Website Clients</a>
-                                <a href="#">Our IT Clients</a>
-                                <a href="#">Our Software Clients</a>
-                                <a href="#">Our Telecoms Clients</a>
-                            </div>
-
-                            <div class="mobile-sidebar__section">
-                                <h3>Our Knowledge</h3>
-                                <a href="#">Technologies</a>
-                                <a href="#">Industries</a>
-                                <a href="#">News</a>
-                                <a href="#">Insights</a>
-                            </div>
-
-                            <div class="mobile-sidebar__section">
-                                <h3>Training</h3>
-                                <a href="#">Train For A Career In Tech</a>
-                                <a href="#">Skills Bootcamp</a>
-                                <a href="#">SCS Frequently Asked Questions</a>
-                                <a href="#">Scion Collaborators</a>
-                            </div>
-
-                            <div class="mobile-sidebar__section">
-                                <h3>Our Company</h3>
-                                <a href="#">Why Choose Us?</a>
-                                <a href="#">Our Culture</a>
-                                <a href="#">Our Team</a>
-                                <a href="#">Our Careers</a>
-                                <a href="#">Our Benefits</a>
-                                <a href="#">Our Accreditations</a>
-                                <a href="#">Laptops 4 Learning</a>
-                            </div>
-
-                            <div class="mobile-sidebar__section">
-                                <h3>Contact Us</h3>
-                                <a href="#">Cambridge Office</a>
-                                <a href="#">Wymondham Office</a>
-                                <a href="#">Great Yarmouth Office</a>
-                            </div>
-                        </nav>
+            <label for="sidebar-toggle" class="sidebar-overlay"></label>
+            <aside class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+                <div class="mobile-sidebar__inner">
+                    <div class="mobile-sidebar__top">
+                        <label for="sidebar-toggle" class="mobile-sidebar__close">&times;</label>
                     </div>
-                </aside>
+
+                    <nav class="mobile-sidebar__nav">
+                        <div class="mobile-sidebar__section">
+                            <h3>Services</h3>
+                            <a href="#">Bespoke Software</a>
+                            <a href="#">IT Support</a>
+                            <a href="#">Digital Marketing</a>
+                            <a href="#">Telecoms Services</a>
+                            <a href="#">Web Design</a>
+                            <a href="#">Cyber Security</a>
+                        </div>
+
+                        <div class="mobile-sidebar__section">
+                            <h3>Our Work</h3>
+                            <a href="#">Case Studies</a>
+                            <a href="#">Our Digital Marketing Clients</a>
+                            <a href="#">Our Website Clients</a>
+                            <a href="#">Our IT Clients</a>
+                            <a href="#">Our Software Clients</a>
+                            <a href="#">Our Telecoms Clients</a>
+                        </div>
+
+                        <div class="mobile-sidebar__section">
+                            <h3>Our Knowledge</h3>
+                            <a href="#">Technologies</a>
+                            <a href="#">Industries</a>
+                            <a href="#">News</a>
+                            <a href="#">Insights</a>
+                        </div>
+
+                        <div class="mobile-sidebar__section">
+                            <h3>Training</h3>
+                            <a href="#">Train For A Career In Tech</a>
+                            <a href="#">Skills Bootcamp</a>
+                            <a href="#">SCS Frequently Asked Questions</a>
+                            <a href="#">Scion Collaborators</a>
+                        </div>
+
+                        <div class="mobile-sidebar__section">
+                            <h3>Our Company</h3>
+                            <a href="#">Why Choose Us?</a>
+                            <a href="#">Our Culture</a>
+                            <a href="#">Our Team</a>
+                            <a href="#">Our Careers</a>
+                            <a href="#">Our Benefits</a>
+                            <a href="#">Our Accreditations</a>
+                            <a href="#">Laptops 4 Learning</a>
+                        </div>
+
+                        <div class="mobile-sidebar__section">
+                            <h3>Contact Us</h3>
+                            <a href="#">Cambridge Office</a>
+                            <a href="#">Wymondham Office</a>
+                            <a href="#">Great Yarmouth Office</a>
+                        </div>
+                    </nav>
+                </div>
+            </aside>
+
+            <div class="page-content">
+                <header class="site-header">
+                    <div class="title-bar">
+                        <img src="img/f-logo.webp" alt="Netmatters">
+                        <button class="support-btn">
+                            <span class="support-icon" aria-hidden="true"></span>
+                            SUPPORT
+                        </button>
+                        <button class="contact-btn">
+                            <span class="contact-icon" aria-hidden="true"></span>
+                            CONTACT
+                        </button>
+                        <form action="/search" method="get">
+                            <input type="search" placeholder="Search...">
+                            <button type="submit" class="search-btn">
+                                <span class="search-icon" aria-hidden="true"></span>
+                            </button>
+                        </form>
+
+                        <label for="sidebar-toggle" class="menu-trigger">
+                            <span class="sidebar-icon" aria-hidden="true"></span>
+                        </label>
+                    </div>
+                </header>
             </div>
+        </div>
 
-            <nav class="services_nav">
-                <ul class="services-nav__list">
-                    <li class="services-nav__item consultancy-tab">
-                        <a href="#" class="services-nav__link">
-                            <span class="icon consultancy-icon" aria-hidden="true"></span>
-                            <span class="small">CONSULTANCY</span>
-                            <span class="large">&amp; DEVELOPMENT</span>
-                        </a>
+        <nav class="services_nav">
+            <ul class="services-nav__list">
+                <li class="services-nav__item consultancy-tab">
+                    <a href="#" class="services-nav__link">
+                        <span class="icon consultancy-icon" aria-hidden="true"></span>
+                        <span class="small">CONSULTANCY</span>
+                        <span class="large">&amp; DEVELOPMENT</span>
+                    </a>
 
-                        <div class="services-nav__dropdown consultancy-dropdown">
-                            <div class="services-nav__dropdown-inner">
-                                <h2>Our Consultancy &amp; Development Services</h2>
+                    <div class="services-nav__dropdown consultancy-dropdown">
+                        <div class="services-nav__dropdown-inner">
+                            <h2>Our Consultancy &amp; Development Services</h2>
 
-                                <ul class="services-nav__dropdown-list">
-                                    <li><a href="#">Bespoke CRM</a></li>
-                                    <li><a href="#">Mobile App Development</a></li>
-                                    <li><a href="#">Operational Systems</a></li>
-                                    <li><a href="#">Intranet Development</a></li>
-                                    <li><a href="#">SAP S/4HANA Management</a></li>
-                                    <li><a href="#">Business Automation</a></li>
-                                    <li><a href="#">Bespoke Databases</a></li>
-                                    <li><a href="#">Business Central Implementation</a></li>
-                                    <li><a href="#">Customer Portal Development</a></li>
-                                    <li><a href="#">Software Integrations</a></li>
-                                    <li><a href="#">Sharepoint Development</a></li>
-                                    <li><a href="#">Internet of Things (IoT)</a></li>
-                                    <li><a href="#">Reporting Hub</a></li>
-                                </ul>
-                            </div>
+                            <ul class="services-nav__dropdown-list">
+                                <li><a href="#">Bespoke CRM</a></li>
+                                <li><a href="#">Mobile App Development</a></li>
+                                <li><a href="#">Operational Systems</a></li>
+                                <li><a href="#">Intranet Development</a></li>
+                                <li><a href="#">SAP S/4HANA Management</a></li>
+                                <li><a href="#">Business Automation</a></li>
+                                <li><a href="#">Bespoke Databases</a></li>
+                                <li><a href="#">Business Central Implementation</a></li>
+                                <li><a href="#">Customer Portal Development</a></li>
+                                <li><a href="#">Software Integrations</a></li>
+                                <li><a href="#">Sharepoint Development</a></li>
+                                <li><a href="#">Internet of Things (IoT)</a></li>
+                                <li><a href="#">Reporting Hub</a></li>
+                            </ul>
                         </div>
-                    </li>
-                    <li class="services-nav__item it-tab">
-                        <a href="#" class="services-nav__link">
-                            <span class="icon it-icon" aria-hidden="true"></span>
-                            <span class="small">IT</span>
-                            <span class="large">SUPPORT</span>
-                        </a>
+                    </div>
+                </li>
+                <li class="services-nav__item it-tab">
+                    <a href="#" class="services-nav__link">
+                        <span class="icon it-icon" aria-hidden="true"></span>
+                        <span class="small">IT</span>
+                        <span class="large">SUPPORT</span>
+                    </a>
 
-                        <div class="services-nav__dropdown it-dropdown">
-                            <div class="services-nav__dropdown-inner">
-                                <h2>Our IT Support Services</h2>
+                    <div class="services-nav__dropdown it-dropdown">
+                        <div class="services-nav__dropdown-inner">
+                            <h2>Our IT Support Services</h2>
 
-                                <ul class="services-nav__dropdown-list">
-                                    <li><a href="#">Managed IT Support</a></li>
-                                    <li><a href="#">IT Consultancy</a></li>
-                                    <li><a href="#">Business IT Support</a></li>
-                                    <li><a href="#">Cloud Service Provider</a></li>
-                                    <li><a href="#">Office 365 for Business</a></li>
-                                    <li><a href="#">Data Backup &amp; Disaster Recovery</a></li>
-                                </ul>
-                            </div>
+                            <ul class="services-nav__dropdown-list">
+                                <li><a href="#">Managed IT Support</a></li>
+                                <li><a href="#">IT Consultancy</a></li>
+                                <li><a href="#">Business IT Support</a></li>
+                                <li><a href="#">Cloud Service Provider</a></li>
+                                <li><a href="#">Office 365 for Business</a></li>
+                                <li><a href="#">Data Backup &amp; Disaster Recovery</a></li>
+                            </ul>
                         </div>
-                    </li>
-                    <li class="services-nav__item marketing-tab">
-                        <a href="#" class="services-nav__link">
-                            <span class="icon marketing-icon" aria-hidden="true"></span>
-                            <span class="small">DIGITAL</span>
-                            <span class="large">MARKETING</span>
-                        </a>
+                    </div>
+                </li>
+                <li class="services-nav__item marketing-tab">
+                    <a href="#" class="services-nav__link">
+                        <span class="icon marketing-icon" aria-hidden="true"></span>
+                        <span class="small">DIGITAL</span>
+                        <span class="large">MARKETING</span>
+                    </a>
 
-                        <div class="services-nav__dropdown marketing-dropdown">
-                            <div class="services-nav__dropdown-inner">
-                                <h2>Our Digital Marketing Services</h2>
+                    <div class="services-nav__dropdown marketing-dropdown">
+                        <div class="services-nav__dropdown-inner">
+                            <h2>Our Digital Marketing Services</h2>
 
-                                <ul class="services-nav__dropdown-list">
-                                    <li><a href="#">Search Engine Optimisation (SEO)</a></li>
-                                    <li><a href="#">Email Marketing</a></li>
-                                    <li><a href="#">Pay Per Click Advertising (PPC)</a></li>
-                                    <li><a href="#">Social Media Marketing</a></li>
-                                    <li><a href="#">Conversion Rate Optimisation (CRO)</a></li>
-                                    <li><a href="#">Content Marketing</a></li>
-                                </ul>
-                            </div>
+                            <ul class="services-nav__dropdown-list">
+                                <li><a href="#">Search Engine Optimisation (SEO)</a></li>
+                                <li><a href="#">Email Marketing</a></li>
+                                <li><a href="#">Pay Per Click Advertising (PPC)</a></li>
+                                <li><a href="#">Social Media Marketing</a></li>
+                                <li><a href="#">Conversion Rate Optimisation (CRO)</a></li>
+                                <li><a href="#">Content Marketing</a></li>
+                            </ul>
                         </div>
-                    </li>
-                    <li class="services-nav__item telecoms-tab">
-                        <a href="#" class="services-nav__link">
-                            <span class="icon telecoms-icon" aria-hidden="true"></span>
-                            <span class="small">TELECOMS</span>
-                            <span class="large">SERVICES</span>
-                        </a>
+                    </div>
+                </li>
+                <li class="services-nav__item telecoms-tab">
+                    <a href="#" class="services-nav__link">
+                        <span class="icon telecoms-icon" aria-hidden="true"></span>
+                        <span class="small">TELECOMS</span>
+                        <span class="large">SERVICES</span>
+                    </a>
 
-                        <div class="services-nav__dropdown telecoms-dropdown">
-                            <div class="services-nav__dropdown-inner">
-                                <h2>Our Telecoms Services</h2>
+                    <div class="services-nav__dropdown telecoms-dropdown">
+                        <div class="services-nav__dropdown-inner">
+                            <h2>Our Telecoms Services</h2>
 
-                                <ul class="services-nav__dropdown-list">
-                                    <li><a href="#">Business Mobile</a></li>
-                                    <li><a href="#">Business Connectivity</a></li>
-                                    <li><a href="#">Phone System Health Check</a></li>
-                                    <li><a href="#">Telecoms Bill Review</a></li>
-                                    <li><a href="#">Business Phone Systems</a></li>
-                                    <li><a href="#">3CX Systems</a></li>
-                                </ul>
-                            </div>
+                            <ul class="services-nav__dropdown-list">
+                                <li><a href="#">Business Mobile</a></li>
+                                <li><a href="#">Business Connectivity</a></li>
+                                <li><a href="#">Phone System Health Check</a></li>
+                                <li><a href="#">Telecoms Bill Review</a></li>
+                                <li><a href="#">Business Phone Systems</a></li>
+                                <li><a href="#">3CX Systems</a></li>
+                            </ul>
                         </div>
-                    </li>
-                    <li class="services-nav__item web-tab">
-                        <a href="#" class="services-nav__link">
-                            <span class="icon web-icon" aria-hidden="true"></span>
-                            <span class="small">WEB</span>
-                            <span class="large">DESIGN</span>
-                        </a>
+                    </div>
+                </li>
+                <li class="services-nav__item web-tab">
+                    <a href="#" class="services-nav__link">
+                        <span class="icon web-icon" aria-hidden="true"></span>
+                        <span class="small">WEB</span>
+                        <span class="large">DESIGN</span>
+                    </a>
 
-                        <div class="services-nav__dropdown web-dropdown">
-                            <div class="services-nav__dropdown-inner">
-                                <h2>Our Web Design Services</h2>
+                    <div class="services-nav__dropdown web-dropdown">
+                        <div class="services-nav__dropdown-inner">
+                            <h2>Our Web Design Services</h2>
 
-                                <ul class="services-nav__dropdown-list">
-                                    <li><a href="#">Bespoke Website Design</a></li>
-                                    <li><a href="#">Branding &amp; Design</a></li>
-                                    <li><a href="#">eCommerce Website Design</a></li>
-                                    <li><a href="#">Mobile App Development</a></li>
-                                    <li><a href="#">Pay Monthly Websites</a></li>
-                                    <li><a href="#">Web Hosting</a></li>
-                                </ul>
-                            </div>
+                            <ul class="services-nav__dropdown-list">
+                                <li><a href="#">Bespoke Website Design</a></li>
+                                <li><a href="#">Branding &amp; Design</a></li>
+                                <li><a href="#">eCommerce Website Design</a></li>
+                                <li><a href="#">Mobile App Development</a></li>
+                                <li><a href="#">Pay Monthly Websites</a></li>
+                                <li><a href="#">Web Hosting</a></li>
+                            </ul>
                         </div>
-                    </li>
-                    <li class="services-nav__item security-tab">
-                        <a href="#" class="services-nav__link">
-                            <span class="icon security-icon" aria-hidden="true"></span>
-                            <span class="small">CYBER</span>
-                            <span class="large">SECURITY</span>
-                        </a>
+                    </div>
+                </li>
+                <li class="services-nav__item security-tab">
+                    <a href="#" class="services-nav__link">
+                        <span class="icon security-icon" aria-hidden="true"></span>
+                        <span class="small">CYBER</span>
+                        <span class="large">SECURITY</span>
+                    </a>
 
-                        <div class="services-nav__dropdown security-dropdown">
-                            <div class="services-nav__dropdown-inner">
-                                <h2>Our Cyber Security Services</h2>
+                    <div class="services-nav__dropdown security-dropdown">
+                        <div class="services-nav__dropdown-inner">
+                            <h2>Our Cyber Security Services</h2>
 
-                                <ul class="services-nav__dropdown-list">
-                                    <li><a href="#">Cyber Security Assessment</a></li>
-                                    <li><a href="#">Cyber Essentials Certification</a></li>
-                                    <li><a href="#">Cyber Security Management</a></li>
-                                    <li><a href="#">PCI Compliance</a></li>
-                                    <li><a href="#">Cyber Penetration Testing</a></li>
-                                    <li><a href="#">Hacking Prevention</a></li>
-                                </ul>
-                            </div>
+                            <ul class="services-nav__dropdown-list">
+                                <li><a href="#">Cyber Security Assessment</a></li>
+                                <li><a href="#">Cyber Essentials Certification</a></li>
+                                <li><a href="#">Cyber Security Management</a></li>
+                                <li><a href="#">PCI Compliance</a></li>
+                                <li><a href="#">Cyber Penetration Testing</a></li>
+                                <li><a href="#">Hacking Prevention</a></li>
+                            </ul>
                         </div>
-                    </li>
-                    <li class="services-nav__item developer-tab">
-                        <a href="#" class="services-nav__link">
-                            <span class="icon developer-icon" aria-hidden="true"></span>
-                            <span class="small">DEVELOPER</span>
-                            <span class="large">COURSE</span>
-                        </a>
+                    </div>
+                </li>
+                <li class="services-nav__item developer-tab">
+                    <a href="#" class="services-nav__link">
+                        <span class="icon developer-icon" aria-hidden="true"></span>
+                        <span class="small">DEVELOPER</span>
+                        <span class="large">COURSE</span>
+                    </a>
 
-                        <div class="services-nav__dropdown developer-dropdown">
-                            <div class="services-nav__dropdown-inner">
-                                <h2>Our Developer Course Services</h2>
+                    <div class="services-nav__dropdown developer-dropdown">
+                        <div class="services-nav__dropdown-inner">
+                            <h2>Our Developer Course Services</h2>
 
-                                <ul class="services-nav__dropdown-list">
-                                    <li><a href="#">Train For A Career In Tech</a></li>
-                                    <li><a href="#">Scion Collaborators</a></li>
-                                    <li><a href="#">Skills Bootcamp</a></li>
-                                    <li><a href="#">Scion Scheme Frequently Asked Questions</a></li>
-                                </ul>
-                            </div>
+                            <ul class="services-nav__dropdown-list">
+                                <li><a href="#">Train For A Career In Tech</a></li>
+                                <li><a href="#">Scion Collaborators</a></li>
+                                <li><a href="#">Skills Bootcamp</a></li>
+                                <li><a href="#">Scion Scheme Frequently Asked Questions</a></li>
+                            </ul>
                         </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+                    </div>
+                </li>
+            </ul>
+        </nav>
 
         <div class="main-carousel">
             <input type="radio" name="slide" id="slide1" checked>
@@ -278,7 +284,7 @@
                         rgba(0, 0, 0, 0.5) 20%,
                         rgba(0, 0, 0, 0.2) 30%,
                         rgba(0, 0, 0, 0) 40%),
-                        url('img/main-carousel-1.webp');">
+                        url('img/main-carousel-1.webp')">
                     <div class="slide-content">
                         <h1>The East Of England's Leading Technology Company</h1>
                         <p>Performance-driven digital and technology services with complete transparency.</p>
@@ -432,52 +438,52 @@
             <div class="slider">
                 <div class="slider-track">
                     <div class="slider-item">
-                        <img src="img/work-carousel-1.jpg" class="award-grey">
-                        <img src="img/work-carousel-1-col.jpg" class="award-colour">
+                        <img src="img/work-carousel-1.jpg" class="award-grey" alt="Award 1">
+                        <img src="img/work-carousel-1-col.jpg" class="award-colour" alt="Award 1 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-2.webp" class="award-grey">
-                        <img src="img/work-carousel-2-col.webp" class="award-colour">
+                        <img src="img/work-carousel-2.webp" class="award-grey" alt="Award 2">
+                        <img src="img/work-carousel-2-col.webp" class="award-colour" alt="Award 2 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-3.png" class="award-grey">
-                        <img src="img/work-carousel-3-col.png" class="award-colour">
+                        <img src="img/work-carousel-3.png" class="award-grey" alt="Award 3">
+                        <img src="img/work-carousel-3-col.png" class="award-colour" alt="Award 3 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-4.jpg" class="award-grey">
-                        <img src="img/work-carousel-4-col.jpg" class="award-colour">
+                        <img src="img/work-carousel-4.jpg" class="award-grey" alt="Award 4">
+                        <img src="img/work-carousel-4-col.jpg" class="award-colour" alt="Award 4 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-5.jpg" class="award-grey">
-                        <img src="img/work-carousel-5-col.jpg" class="award-colour">
+                        <img src="img/work-carousel-5.jpg" class="award-grey" alt="Award 5">
+                        <img src="img/work-carousel-5-col.jpg" class="award-colour" alt="Award 5 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-6.jpg" class="award-grey"> 
-                        <img src="img/work-carousel-6-col.jpg" class="award-colour">
+                        <img src="img/work-carousel-6.jpg" class="award-grey" alt="Award 6"> 
+                        <img src="img/work-carousel-6-col.jpg" class="award-colour" alt="Award 6 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-7.png" class="award-grey">
-                        <img src="img/work-carousel-7-col.png" class="award-colour">
+                        <img src="img/work-carousel-7.png" class="award-grey" alt="Award 7">
+                        <img src="img/work-carousel-7-col.png" class="award-colour" alt="Award 7 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-8.jpg" class="award-grey">
-                        <img src="img/work-carousel-8-col.jpg" class="award-colour">
+                        <img src="img/work-carousel-8.jpg" class="award-grey" alt="Award 8">
+                        <img src="img/work-carousel-8-col.jpg" class="award-colour" alt="Award 8 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-9.png" class="award-grey">
-                        <img src="img/work-carousel-9-col.png" class="award-colour">
+                        <img src="img/work-carousel-9.png" class="award-grey" alt="Award 9">
+                        <img src="img/work-carousel-9-col.png" class="award-colour" alt="Award 9 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-10.png" class="award-grey">
-                        <img src="img/work-carousel-10-col.png" class="award-colour">
+                        <img src="img/work-carousel-10.png" class="award-grey" alt="Award 10">
+                        <img src="img/work-carousel-10-col.png" class="award-colour" alt="Award 10 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-11.jpg" class="award-grey">
-                        <img src="img/work-carousel-11-col.jpg" class="award-colour">
+                        <img src="img/work-carousel-11.jpg" class="award-grey" alt="Award 11">
+                        <img src="img/work-carousel-11-col.jpg" class="award-colour" alt="Award 11 Colour">
                     </div>
                     <div class="slider-item">
-                        <img src="img/work-carousel-12.jpg" class="award-grey">
-                        <img src="img/work-carousel-12-col.jpg" class="award-colour">
+                        <img src="img/work-carousel-12.jpg" class="award-grey" alt="Award 12">
+                        <img src="img/work-carousel-12-col.jpg" class="award-colour" alt="Award 12 Colour">
                     </div>
                 </div>
             </div>
@@ -527,17 +533,17 @@
             <div class="news-grid">
                 <a href="#" class="news-card">
                     <div class="news-card__media">
-                        <img src="img/news-1.webp" alt="Increase Exit Value With Bespoke Software"/>
+                        <img src="img/news-1.webp" alt="Increase Exit Value With Bespoke Software">
                         <span class="news-card__tag">Insights</span>
                     </div>
                     <div class="news-card__content">
-                        <h3>How Much Could Bespoke Software Add to Your E...</h3>
+                        <h2>How Much Could Bespoke Software Add to Your E...</h2>
                         <p>If you're a Managing Director or Senior Manager preparing your business for exit, you know that</p>
 
                         <span class="news-card__button">READ MORE:</span>
 
                         <div class="news-card__meta">
-                            <img class="news-card__avatar" src="img/nm-icon.webp">
+                            <img class="news-card__avatar" src="img/nm-icon.webp" alt="Netmatters Avatar">
                             <div>
                                 <strong>Posted by Netmatters</strong>
                                 <span>27th June 2025</span>
@@ -548,17 +554,17 @@
 
                 <a href="#" class="news-card">
                     <div class="news-card__media">
-                        <img src="img/news-2.webp" alt="How Can AI Benefit My Business?"/>
+                        <img src="img/news-2.webp" alt="How Can AI Benefit My Business?">
                         <span class="news-card__tag">Insights</span>
                     </div>
                     <div class="news-card__content">
-                        <h3>How Can AI Benefit My Business?</h3>
+                        <h2>How Can AI Benefit My Business?</h2>
                         <p>The idea of integrating AI into your business operations may seem daunting, but there are undeniable...</p>
 
                         <span class="news-card__button">Read More</span>
 
                         <div class="news-card__meta">
-                            <img class="news-card__avatar" src="img/nm-icon.webp">
+                            <img class="news-card__avatar" src="img/nm-icon.webp" alt="Netmatters Avatar">
                             <div>
                                 <strong>Posted by Netmatters</strong>
                                 <span>26th June 2025</span>
@@ -569,17 +575,17 @@
 
                 <a href="#" class="news-card news-card__career">
                     <div class="news-card__media">
-                        <img src="img/news-3.png" alt="1st Line Technician"/>
+                        <img src="img/news-3.png" alt="1st Line Technician">
                         <span class="news-card__tag news-card__tag--career">Careers</span>
                     </div>
                     <div class="news-card__content">
-                        <h3>1st Line Technician</h3>
+                        <h2>1st Line Technician</h2>
                         <p>Salary Range £25,000 - £29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham,...</p>
 
                         <span class="news-card__button">Read More</span>
 
                         <div class="news-card__meta">
-                            <img class="news-card__avatar" src="img/news-poster-icon.webp">
+                            <img class="news-card__avatar" src="img/news-poster-icon.webp" alt="Netmatters Profile Avatar">
                             <div>
                                 <strong>Posted by Netmatters</strong>
                                 <span>27th June 2025</span>
@@ -594,19 +600,19 @@
             <div class="company-slider">
                 <div class="slider">
                     <div class="slider-track">
-                        <img src="img/bus-carousel-1.webp">
-                        <img src="img/bus-carousel-2.webp">
-                        <img src="img/bus-carousel-3.webp">
-                        <img src="img/bus-carousel-4.webp">
-                        <img src="img/bus-carousel-5.webp">
-                        <img src="img/bus-carousel-6.webp"> 
-                        <img src="img/bus-carousel-7.webp">
-                        <img src="img/bus-carousel-8.webp">
-                        <img src="img/bus-carousel-9.webp">
-                        <img src="img/bus-carousel-10.webp">
-                        <img src="img/bus-carousel-11.webp">
-                        <img src="img/bus-carousel-12.webp">
-                        <img src="img/bus-carousel-13.webp">
+                        <img src="img/bus-carousel-1.webp" alt="Company 1">
+                        <img src="img/bus-carousel-2.webp" alt="Company 2">
+                        <img src="img/bus-carousel-3.webp" alt="Company 3">
+                        <img src="img/bus-carousel-4.webp" alt="Company 4">
+                        <img src="img/bus-carousel-5.webp" alt="Company 5">
+                        <img src="img/bus-carousel-6.webp" alt="Company 6"> 
+                        <img src="img/bus-carousel-7.webp" alt="Company 7">
+                        <img src="img/bus-carousel-8.webp" alt="Company 8">
+                        <img src="img/bus-carousel-9.webp" alt="Company 9">
+                        <img src="img/bus-carousel-10.webp" alt="Company 10">
+                        <img src="img/bus-carousel-11.webp" alt="Company 11">
+                        <img src="img/bus-carousel-12.webp" alt="Company 12">
+                        <img src="img/bus-carousel-13.webp" alt="Company 13">
                     </div>
                 </div>
             </div>

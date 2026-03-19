@@ -9,23 +9,92 @@
         <header>
             <div class="title-bar">
                 <img src="img/f-logo.webp">
-            <button class="support-btn">
-                <span class="support-icon" aria-hidden="true"></span>
-                SUPPORT
-            </button>
-            <button class="contact-btn">
-                <span class="contact-icon" aria-hidden="true"></span>
-                CONTACT
-            </button>
-            <form action="/search" method="get">
-                <input type="search" placeholder="Search...">
-                <button type="submit" class="search-btn">
-                    <span class="search-icon" aria-hidden="true"></span>
+                <button class="support-btn">
+                    <span class="support-icon" aria-hidden="true"></span>
+                    SUPPORT
                 </button>
-            </form>
-            <button class="sidebar-btn">
-                <span class="sidebar-icon" aria-hidden="true"></span>
-            </button>
+                <button class="contact-btn">
+                    <span class="contact-icon" aria-hidden="true"></span>
+                    CONTACT
+                </button>
+                <form action="/search" method="get">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn">
+                        <span class="search-icon" aria-hidden="true"></span>
+                    </button>
+                </form>
+
+                <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+
+                <label for="sidebar-toggle" class="menu-trigger">
+                    <span class="sidebar-icon" aria-hidden="true"></span>
+                </label>
+
+                <label for="sidebar-toggle" class="sidebar-overlay"></label>
+
+                <aside class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+                    <div class="mobile-sidebar__inner">
+                        <div class="mobile-sidebar__top">
+                            <label for="sidebar-toggle" class="mobile-sidebar__close">&times;</label>
+                        </div>
+
+                        <nav class="mobile-sidebar__nav">
+                            <div class="mobile-sidebar__section">
+                                <h3>Services</h3>
+                                <a href="#">Bespoke Software</a>
+                                <a href="#">IT Support</a>
+                                <a href="#">Digital Marketing</a>
+                                <a href="#">Telecoms Services</a>
+                                <a href="#">Web Design</a>
+                                <a href="#">Cyber Security</a>
+                            </div>
+
+                            <div class="mobile-sidebar__section">
+                                <h3>Our Work</h3>
+                                <a href="#">Case Studies</a>
+                                <a href="#">Our Digital Marketing Clients</a>
+                                <a href="#">Our Website Clients</a>
+                                <a href="#">Our IT Clients</a>
+                                <a href="#">Our Software Clients</a>
+                                <a href="#">Our Telecoms Clients</a>
+                            </div>
+
+                            <div class="mobile-sidebar__section">
+                                <h3>Our Knowledge</h3>
+                                <a href="#">Technologies</a>
+                                <a href="#">Industries</a>
+                                <a href="#">News</a>
+                                <a href="#">Insights</a>
+                            </div>
+
+                            <div class="mobile-sidebar__section">
+                                <h3>Training</h3>
+                                <a href="#">Train For A Career In Tech</a>
+                                <a href="#">Skills Bootcamp</a>
+                                <a href="#">SCS Frequently Asked Questions</a>
+                                <a href="#">Scion Collaborators</a>
+                            </div>
+
+                            <div class="mobile-sidebar__section">
+                                <h3>Our Company</h3>
+                                <a href="#">Why Choose Us?</a>
+                                <a href="#">Our Culture</a>
+                                <a href="#">Our Team</a>
+                                <a href="#">Our Careers</a>
+                                <a href="#">Our Benefits</a>
+                                <a href="#">Our Accreditations</a>
+                                <a href="#">Laptops 4 Learning</a>
+                            </div>
+
+                            <div class="mobile-sidebar__section">
+                                <h3>Contact Us</h3>
+                                <a href="#">Cambridge Office</a>
+                                <a href="#">Wymondham Office</a>
+                                <a href="#">Great Yarmouth Office</a>
+                            </div>
+                        </nav>
+                    </div>
+                </aside>
             </div>
 
             <nav class="services_nav">

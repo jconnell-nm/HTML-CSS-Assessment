@@ -66,15 +66,15 @@ input[type="search"] {
     border: 2px solid $grey;
 }
 
+.search-btn:hover {
+    background: darken($grey, 10%);
+    border-color: darken($grey, 10%);
+}
+
 .sidebar-btn {
     @extend .header-btn-sml;
     background: $dark-blue;
     border: 2px solid $dark-blue;
-}
-
-.search-btn:hover {
-    background: darken($grey, 10%);
-    border-color: darken($grey, 10%);
 }
 
 .sidebar-btn:hover {

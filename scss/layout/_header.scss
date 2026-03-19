@@ -10,6 +10,124 @@
     align-items: center;
 }
 
+// Side bar
+
+.sidebar-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-icon {
+    @extend .header-btn-sml;
+    background: $dark-blue;
+    border: 2px solid $dark-blue;
+}
+
+.sidebar-btn:hover {
+    background: darken($dark-blue, 10%);
+    border-color: darken($dark-blue, 10%);
+}
+
+.menu-trigger {
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 380px;
+    max-width: 100%;
+    height: 100dvh;
+    color: white;
+    background: #222;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.mobile-sidebar__inner {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-sidebar_top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    background: #34374a;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.mobile-sidebar__close {
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+    color: white;
+}
+
+.mobile-sidebar__section h3 {
+    margin: 0;
+    padding: 1.25rem;
+    background: $dark-blue;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mobile-sidebar__section a {
+    display: block;
+    position: relative;
+    padding: 1.4rem 1.25rem 1.4rem 3.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-sidebar__section a::before {
+    content: "»";
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mobile-sidebar__section a:hover {
+    background: #2e3247;
+}
+
+.close-btn {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.sidebar-toggle:checked ~ .sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.sidebar-toggle:checked ~ .mobile-sidebar {
+    transform: translateX(0);
+}
+
 // Service panel
 
 .services_nav {

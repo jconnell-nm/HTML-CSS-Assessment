@@ -19,6 +19,16 @@ footer p {
     }
 }
 
+.footer-bottom .line {
+    display: inline;
+}
+
+@media (max-width: 767px) {
+    .footer-bottom .line {
+        display: block;
+    }
+}
+
 .contact-us {
     background-color: $dark-blue;
     color: white;
@@ -42,6 +52,52 @@ footer p {
     grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
     gap: 20px;
     align-items: start;
+}
+
+@media(max-width: 1260px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-social {
+        grid-column: 1 / -1;
+    }
+}
+
+@media(max-width: 991px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-about {
+        grid-column: 1;
+    }
+
+    .footer-services {
+        grid-column: 2;
+    }
+
+    .footer-industries {
+        grid-column: 1;
+    }
+
+    .footer-locations {
+        grid-column: 2;
+    }
+}
+
+@media(max-width: 767px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-social,
+    .footer-about,
+    .footer-services,
+    .footer-industries,
+    .footer-locations {
+        grid-column: 1;
+    }
 }
 
 .footer-logo {

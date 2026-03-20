@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -14,8 +14,8 @@ body {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?2tcgn9");
-  src: url("../fonts/icomoon.eot?2tcgn9#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?2tcgn9") format("truetype"), url("../fonts/icomoon.woff?2tcgn9") format("woff"), url("../fonts/icomoon.svg?2tcgn9#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?erlf7o");
+  src: url("../fonts/icomoon.eot?erlf7o#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?erlf7o") format("truetype"), url("../fonts/icomoon.woff?erlf7o") format("woff"), url("../fonts/icomoon.svg?erlf7o#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -77,7 +77,7 @@ body {
   border-color: #7e808a;
 }
 
-.header-btn-sml, .search-btn, .sidebar-btn, .sidebar-icon {
+.header-btn-sml, .search-btn, .sidebar-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -138,6 +138,12 @@ input[type="search"] {
 
 .sidebar-icon::before {
   content: "\e9bd";
+  font-family: 'icomoon';
+  display: inline-block;
+}
+
+.sidebar-close-icon::before {
+  content: "\ea0f";
   font-family: 'icomoon';
   display: inline-block;
 }
@@ -361,10 +367,13 @@ footer p a:hover {
 
 .page-layout {
   position: relative;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
 .page-content {
+  position: relative;
+  z-index: 1;
   background: white;
   transition: transform var(--sidebar-speed) ease;
 }
@@ -375,19 +384,12 @@ footer p a:hover {
   pointer-events: none;
 }
 
-.sidebar-icon {
-  background: #333645;
-  border: 2px solid #333645;
-}
-
-.sidebar-btn:hover {
-  background: #1d1f28;
-  border-color: #1d1f28;
-}
-
 .menu-trigger {
   width: 64px;
   height: 64px;
+  font-size: 24px;
+  color: white;
+  background: #333645;
   position: relative;
   margin-left: auto;
   border-radius: 3px;
@@ -396,7 +398,31 @@ footer p a:hover {
   justify-content: center;
   position: relative;
   cursor: pointer;
-  z-index: 1101;
+}
+
+.menu-trigger:hover {
+  background: #1d1f28;
+}
+
+.menu-trigger span {
+  position: absolute;
+  transition: opacity 0.5s ease;
+}
+
+.sidebar-icon {
+  opacity: 1;
+}
+
+.sidebar-close-icon {
+  opacity: 0;
+}
+
+.sidebar-toggle:checked ~ .page-content .sidebar-icon {
+  opacity: 0;
+}
+
+.sidebar-toggle:checked ~ .page-content .sidebar-close-icon {
+  opacity: 1;
 }
 
 .sidebar-overlay {
@@ -407,6 +433,13 @@ footer p a:hover {
   visibility: hidden;
   pointer-events: none;
   z-index: 999;
+  transition: opacity var(--sidebar-speed) ease, visibility var(--sidebar-speed) ease;
+}
+
+.sidebar-toggle:checked ~ .sidebar-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-sidebar {
@@ -427,23 +460,6 @@ footer p a:hover {
   height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-.mobile-sidebar__top {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
-  background: #34374a;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-.mobile-sidebar__close {
-  cursor: pointer;
-  font-size: 2rem;
-  line-height: 1;
-  color: white;
 }
 
 .mobile-sidebar__section h3 {
@@ -780,6 +796,7 @@ footer p a:hover {
 }
 
 .main-carousel {
+  position: relative;
   height: 550px;
 }
 
@@ -883,7 +900,7 @@ footer p a:hover {
 
 .dots {
   position: absolute;
-  bottom: 115px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

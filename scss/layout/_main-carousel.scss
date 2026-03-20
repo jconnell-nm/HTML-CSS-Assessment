@@ -3,6 +3,7 @@
 }
 
 .main-carousel {
+    position: relative;
     height: 550px;
 }
 
@@ -106,7 +107,7 @@
 
 .dots {
     position: absolute;
-    bottom: 115px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;

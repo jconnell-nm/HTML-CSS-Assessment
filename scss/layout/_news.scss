@@ -13,10 +13,9 @@
     margin-bottom: 10px;
 }
 
-.news-header h2 {
+.news-header h1 {
     font-size: 2.5rem;
     line-height: 1.1;
-    margin: 0;
 }
 
 .news-grid {
@@ -36,6 +35,10 @@
     gap: 10px;
 }
 
+.view-all--bottom {
+    display: none;
+}
+
 @media (max-width: 1260px) {
     .news-section {
         padding: 32px 50px 48px;
@@ -49,13 +52,9 @@
     .news-grid > *:last-child {
         display: none;
     }
-
-    .view-all--bottom {
-        display: none;
-    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .view-all--top {
         display: none;
     }

@@ -96,24 +96,11 @@ input[type="search"] {
   height: 60px;
 }
 
-@media (max-width: 1260px) {
-  input[type="search"] {
-    display: none;
-  }
-}
-
 .search-btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background: #999AA2;
   border: 2px solid #999AA2;
-}
-
-@media (max-width: 1260px) {
-  .search-btn {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
 }
 
 .search-btn:hover {
@@ -424,9 +411,8 @@ footer p a:hover {
 .logo {
   flex: 0 0 auto;
   display: block;
-  max-height: 60px;
+  height: clamp(30px, 8vw, 60px);
   width: auto;
-  margin: 0 auto;
 }
 
 .header-actions {
@@ -862,9 +848,71 @@ footer p a:hover {
   text-decoration: underline;
 }
 
+.small-contact-btn {
+  display: none;
+  color: #333645;
+  font-size: 32px;
+  border: 0px;
+  padding: 5px;
+  margin: 0px;
+  background-color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1260px) {
+  input[type="search"] {
+    display: none;
+  }
+  .search-btn {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+}
+
 @media (max-width: 992px) {
   .services_nav {
     display: none;
+  }
+  .support-btn,
+  .contact-btn {
+    display: none;
+  }
+  input[type="search"] {
+    display: block;
+  }
+  .search-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-actions {
+    margin-right: 0;
+  }
+  input[type="search"],
+  .search-btn {
+    display: none;
+  }
+  .sidebar-btn {
+    display: inline-flex;
+  }
+  .small-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .title-bar {
+    padding: 15px;
+    gap: 10px;
+  }
+  .header-actions {
+    gap: 10px;
+    margin-left: auto;
+  }
+  .menu-trigger {
+    width: 56px;
+    height: 56px;
   }
 }
 
@@ -880,6 +928,7 @@ footer p a:hover {
 
 .slides {
   display: flex;
+  gap: 1rem;
   position: relative;
   width: 100%;
   height: 100%;
@@ -1040,36 +1089,8 @@ footer p a:hover {
   background: white;
 }
 
-.services-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.services-header h1 {
-  font-size: 3rem;
-  font-weight: 100;
-  margin: 0;
-}
-
-.services-header a {
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 2.5rem;
-}
-
-.services-header a:hover {
-  text-decoration: underline;
-}
-
-.services-header a:visited {
-  color: #333645;
-}
-
 .services {
-  padding: 50px 150px;
+  padding: 50px 50px;
   background: #f4f4f4;
 }
 
@@ -1084,6 +1105,48 @@ footer p a:hover {
   gap: 30px;
 }
 
+.services-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex: 0 0 100%;
+  margin-bottom: 40px;
+}
+
+.services-header h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+.vow {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.vow:hover {
+  text-decoration: underline;
+}
+
+.vow:visited {
+  color: #333645;
+}
+
+.vow-bottom {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .vow-top {
+    display: none;
+  }
+  .vow-bottom {
+    display: inline-block;
+  }
+}
+
 .services-container > .service-card {
   background: white;
   border: 1px solid #999AA2;
@@ -1095,10 +1158,6 @@ footer p a:hover {
   flex-direction: column;
   align-items: center;
   flex: 1 1 250px;
-}
-
-.services-container .service-card:nth-child(-n+4) {
-  flex: 1 1 350px;
 }
 
 .services-container > div span {
@@ -1363,6 +1422,13 @@ p {
   background: #4caf50;
 }
 
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
 .news-section {
   width: 100%;
   margin: 0 auto;
@@ -1378,10 +1444,9 @@ p {
   margin-bottom: 10px;
 }
 
-.news-header h2 {
+.news-header h1 {
   font-size: 2.5rem;
   line-height: 1.1;
-  margin: 0;
 }
 
 .news-grid {
@@ -1401,6 +1466,10 @@ p {
   gap: 10px;
 }
 
+.view-all--bottom {
+  display: none;
+}
+
 @media (max-width: 1260px) {
   .news-section {
     padding: 32px 50px 48px;
@@ -1412,12 +1481,9 @@ p {
   .news-grid > *:last-child {
     display: none;
   }
-  .view-all--bottom {
-    display: none;
-  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .view-all--top {
     display: none;
   }

@@ -87,3 +87,10 @@ p {
 .green {
     background: $light-green;
 }
+
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column;
+        gap: 0px;
+    }
+}

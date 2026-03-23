@@ -44,27 +44,22 @@ body {
   font-family: inherit;
 }
 
-.header-btn-lrg, .support-btn, .contact-btn {
+.support-btn {
+  background-color: #4183d7;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   height: 60px;
-  padding: 8px 16px;
-  font-size: 24px;
+  padding: 16px 16px;
+  font-size: 20px;
   text-transform: uppercase;
+  text-decoration: none;
   color: white;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.support-btn {
   background: #4183d7;
   border: 2px solid #4183d7;
-}
-
-.contact-btn {
-  background: #999AA2;
-  border: 2px solid #999AA2;
 }
 
 .support-btn:hover {
@@ -72,21 +67,27 @@ body {
   border-color: #286abd;
 }
 
-.contact-btn:hover {
-  background: #7e808a;
-  border-color: #7e808a;
-}
-
-.header-btn-sml, .search-btn, .sidebar-btn {
+.contact-btn {
+  background-color: #999AA2;
   display: inline-flex;
   align-items: center;
   gap: 10px;
   height: 60px;
-  padding: 8px 16px;
-  font-size: 24px;
+  padding: 16px 16px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
   color: white;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
+  background: #999AA2;
+  border: 2px solid #999AA2;
+}
+
+.contact-btn:hover {
+  background: #7e808a;
+  border-color: #7e808a;
 }
 
 input[type="search"] {
@@ -97,6 +98,19 @@ input[type="search"] {
 }
 
 .search-btn {
+  background-color: #999AA2;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  padding: 16px 16px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background: #999AA2;
@@ -108,7 +122,25 @@ input[type="search"] {
   border-color: #7e808a;
 }
 
+.search-btn:hover {
+  background: #7e808a;
+  border-color: #7e808a;
+}
+
 .sidebar-btn {
+  background-color: #333645;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  padding: 16px 16px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   background: #333645;
   border: 2px solid #333645;
 }
@@ -116,6 +148,151 @@ input[type="search"] {
 .sidebar-btn:hover {
   background: #1d1f28;
   border-color: #1d1f28;
+}
+
+.sidebar-btn:hover {
+  background: #1d1f28;
+  border-color: #1d1f28;
+}
+
+.slide-btn {
+  background-color: #926fb1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  padding: 16px 28px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.slide-btn:hover {
+  background: #79539a;
+  border-color: #79539a;
+}
+
+.welcome-btn {
+  background-color: #202330;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  padding: 16px 28px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.welcome-btn:hover {
+  background: #0c0d11;
+  border-color: #0c0d11;
+}
+
+.google-btn {
+  background-color: #4183d7;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  padding: 16px 28px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.google-btn:hover {
+  background: #286abd;
+  border-color: #286abd;
+}
+
+.trustpilot-btn {
+  background-color: #4caf50;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 60px;
+  padding: 16px 28px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trustpilot-btn:hover {
+  background: #3d8b40;
+  border-color: #3d8b40;
+}
+
+.news-card__btn {
+  background-color: #f7b322;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 16px 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 36px;
+}
+
+.news-card__btn:hover {
+  background: #de9a08;
+  border-color: #de9a08;
+}
+
+.news-card__btn:hover {
+  background: #f7b322;
+}
+
+.news-card-career__btn {
+  background-color: #4183d7;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 16px 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 36px;
+}
+
+.news-card-career__btn:hover {
+  background: #286abd;
+  border-color: #286abd;
+}
+
+.news-card-career__btn:hover {
+  background: #4183d7;
 }
 
 .support-icon::before {
@@ -507,7 +684,7 @@ footer p a:hover {
   max-width: 100%;
   height: 100dvh;
   color: white;
-  background: #222;
+  background: #202330;
   transform: translateX(100%);
   transition: transform var(--sidebar-speed) ease;
   z-index: 1000;
@@ -521,7 +698,7 @@ footer p a:hover {
 
 .mobile-sidebar__section h3 {
   margin: 0;
-  padding: 1.25rem;
+  padding: 1rem;
   background: #333645;
   text-transform: uppercase;
   font-size: 1rem;
@@ -531,7 +708,7 @@ footer p a:hover {
 .mobile-sidebar__section a {
   display: block;
   position: relative;
-  padding: 1.4rem 1.25rem 1.4rem 3.2rem;
+  padding: 1rem 1.25rem 1rem 3.2rem;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
@@ -546,8 +723,8 @@ footer p a:hover {
   transform: translateY(-50%);
 }
 
-.mobile-sidebar__section a:hover {
-  background: #2e3247;
+.mobile-sidebar__section:hover h3 {
+  background: #3e4154;
 }
 
 .close-btn {
@@ -859,6 +1036,11 @@ footer p a:hover {
   cursor: pointer;
 }
 
+input[type="search"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(198, 252, 255, 0.7);
+}
+
 @media (max-width: 1260px) {
   input[type="search"] {
     display: none;
@@ -979,20 +1161,6 @@ footer p a:hover {
   margin-bottom: 2rem;
 }
 
-.slide-btn {
-  display: inline-block;
-  gap: 14x;
-  padding: 16px 28px;
-  color: white;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 4px;
-}
-
-.slide-btn:hover {
-  filter: brightness(0.95);
-}
-
 @media (max-width: 992px) {
   .slide {
     justify-content: center;
@@ -1031,32 +1199,56 @@ footer p a:hover {
   background: #926fb1;
 }
 
+#slide1:checked ~ .slides .slide:nth-child(1) .slide-btn:hover {
+  background: #79539a;
+}
+
 #slide2:checked ~ .slides .slide:nth-child(2) .slide-btn {
   background: #f7b322;
+}
+
+#slide2:checked ~ .slides .slide:nth-child(2) .slide-btn:hover {
+  background: #de9a08;
 }
 
 #slide3:checked ~ .slides .slide:nth-child(3) .slide-btn {
   background: #4183d7;
 }
 
+#slide3:checked ~ .slides .slide:nth-child(3) .slide-btn:hover {
+  background: #286abd;
+}
+
 #slide4:checked ~ .slides .slide:nth-child(4) .slide-btn {
   background: #4caf50;
+}
+
+#slide4:checked ~ .slides .slide:nth-child(4) .slide-btn:hover {
+  background: #3d8b40;
 }
 
 #slide5:checked ~ .slides .slide:nth-child(5) .slide-btn {
   background: #ce4125;
 }
 
+#slide5:checked ~ .slides .slide:nth-child(5) .slide-btn:hover {
+  background: #a3331d;
+}
+
 #slide6:checked ~ .slides .slide:nth-child(6) .slide-btn {
   background: #926fb1;
+}
+
+#slide6:checked ~ .slides .slide:nth-child(6) .slide-btn:hover {
+  background: #79539a;
 }
 
 #slide7:checked ~ .slides .slide:nth-child(7) .slide-btn {
   background: #f5255a;
 }
 
-.slide-btn:hover {
-  background-color: #a373ca;
+#slide7:checked ~ .slides .slide:nth-child(7) .slide-btn:hover {
+  background: #dd0a40;
 }
 
 .dots {
@@ -1191,13 +1383,24 @@ footer p a:hover {
 }
 
 .reg-btn {
-  border: none;
-  padding: 14px 24px;
-  border-radius: 4px;
+  background-color: #f7b322;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 16px 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
   color: white;
-  font-weight: 700;
-  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+.reg-btn:hover {
+  background: #de9a08;
+  border-color: #de9a08;
 }
 
 .consultancy-service .consultancy-icon {
@@ -1388,19 +1591,6 @@ p {
   margin-top: 30px;
 }
 
-.btn {
-  border: none;
-  padding: 18px 28px;
-  color: white;
-  font-size: 18px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  filter: brightness(0.9);
-}
-
 .welcome a {
   color: white;
   text-decoration: none;
@@ -1408,18 +1598,6 @@ p {
 
 .welcome a:hover {
   text-decoration: underline;
-}
-
-.dark {
-  background: #202330;
-}
-
-.blue {
-  background: #4183d7;
-}
-
-.green {
-  background: #4caf50;
 }
 
 @media (max-width: 991px) {
@@ -1571,19 +1749,58 @@ p {
   color: #999AA2;
 }
 
-.news-card__button {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 16px 24px;
-  margin-bottom: 36px;
+.news-card__btn {
   background-color: #f7b322;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 16px 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
   color: white;
-  font-weight: 700;
+  border: none;
   border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 36px;
 }
 
-.news-card__career .news-card__button {
+.news-card__btn:hover {
+  background: #de9a08;
+  border-color: #de9a08;
+}
+
+.news-card__btn:hover {
+  background: #f7b322;
+}
+
+.news-card-career__btn {
   background-color: #4183d7;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  padding: 16px 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-bottom: 36px;
+}
+
+.news-card-career__btn:hover {
+  background: #286abd;
+  border-color: #286abd;
+}
+
+.news-card-career__btn:hover {
+  background: #4183d7;
 }
 
 .news-card__meta {

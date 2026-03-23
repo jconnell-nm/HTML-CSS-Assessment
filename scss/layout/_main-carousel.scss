@@ -61,20 +61,6 @@
     margin-bottom: 2rem;
 }
 
-.slide-btn {
-    display: inline-block;
-    gap: 14x;
-    padding: 16px 28px;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 4px;
-}
-
-.slide-btn:hover {
-    filter: brightness(0.95)
-}
-
 @media (max-width: 992px) {
     .slide {
         justify-content: center;
@@ -115,34 +101,58 @@
 
 #slide1:checked ~ .slides .slide:nth-child(1) .slide-btn {
     background: $purple;
+
+    &:hover {
+        background: darken($purple, 10%);
+    }
 }
 
 #slide2:checked ~ .slides .slide:nth-child(2) .slide-btn {
     background: $yellow;
+
+    &:hover {
+        background: darken($yellow, 10%);
+    }
 }
 
 #slide3:checked ~ .slides .slide:nth-child(3) .slide-btn {
     background: $light-blue;
+
+    &:hover {
+        background: darken($light-blue, 10%);
+    }
 }
 
 #slide4:checked ~ .slides .slide:nth-child(4) .slide-btn {
     background: $light-green;
+
+    &:hover {
+        background: darken($light-green, 10%);
+    }
 }
 
 #slide5:checked ~ .slides .slide:nth-child(5) .slide-btn {
     background: $dark-red;
+
+    &:hover {
+        background: darken($dark-red, 10%);
+    }
 }
 
 #slide6:checked ~ .slides .slide:nth-child(6) .slide-btn {
     background: $purple;
+
+    &:hover {
+        background: darken($purple, 10%);
+    }
 }
 
 #slide7:checked ~ .slides .slide:nth-child(7) .slide-btn {
     background: $light-red;
-}
 
-.slide-btn:hover {
-    background-color: #a373ca;
+    &:hover {
+        background: darken($light-red, 10%);
+    }
 }
 
 .dots {

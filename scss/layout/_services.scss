@@ -101,13 +101,7 @@
 }
 
 .reg-btn {
-    border: none;
-    padding: 14px 24px;
-    border-radius: 4px;
-    color: white;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
+    @include button($yellow, 16px, 50px, 16px);
 }
 
 .consultancy-service .consultancy-icon {

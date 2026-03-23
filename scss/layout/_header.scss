@@ -49,7 +49,7 @@
     transition: transform var(--sidebar-speed) ease;
 }
 
-// Side bar
+// Sidebar
 
 .sidebar-toggle {
     position: absolute;
@@ -123,7 +123,7 @@
     max-width: 100%;
     height: 100dvh;
     color: white;
-    background: #222;
+    background: $midnight-blue;
     transform: translateX(100%);
     transition: transform var(--sidebar-speed) ease;
     z-index: 1000;
@@ -137,7 +137,7 @@
 
 .mobile-sidebar__section h3 {
     margin: 0;
-    padding: 1.25rem;
+    padding: 1rem;
     background: $dark-blue;
     text-transform: uppercase;
     font-size: 1rem;
@@ -147,7 +147,7 @@
 .mobile-sidebar__section a {
     display: block;
     position: relative;
-    padding: 1.4rem 1.25rem 1.4rem 3.2rem;
+    padding: 1rem 1.25rem 1rem 3.2rem;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
@@ -162,8 +162,8 @@
     transform: translateY(-50%);
 }
 
-.mobile-sidebar__section a:hover {
-    background: #2e3247;
+.mobile-sidebar__section:hover h3 {
+    background: lighten($dark-blue, 5%);
 }
 
 .close-btn {
@@ -180,7 +180,7 @@
     transform: translateX(calc(var(--sidebar-width) * -1));
 }
 
-// Service panel
+// Service Panel
 
 .services_nav {
     position: relative;
@@ -477,6 +477,11 @@
     margin: 0px;
     background-color: white;
     cursor: pointer;
+}
+
+input[type="search"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(#C6FCFF, 0.7);
 }
 
 @media (max-width: 1260px) {

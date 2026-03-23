@@ -21,6 +21,23 @@
     }
 }
 
-@mixin button() {
-    
+@mixin button($bg-color,$width, $height, $font-size: 20px) {
+    background-color: $bg-color;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    height: $height;
+    padding: 16px $width;
+    font-size: $font-size;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+        background: darken($bg-color, 10%);
+        border-color: darken($bg-color, 10%);
+    }
 }

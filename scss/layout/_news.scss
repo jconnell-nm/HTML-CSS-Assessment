@@ -146,19 +146,24 @@
     color: $grey;
 }
 
-.news-card__button {
-    display: inline-block;
+.news-card__btn {
+    @include button($yellow, 16px, 50px, 16px);
     align-self: flex-start;
-    padding: 16px 24px;
     margin-bottom: 36px;
-    background-color: $yellow;
-    color: white;
-    font-weight: 700;
-    border-radius: 4px;
+
+    &:hover {
+        background: $yellow;
+    }
 }
 
-.news-card__career .news-card__button {
-    background-color: $light-blue;
+.news-card-career__btn {
+    @include button($light-blue, 16px, 50px, 16px);
+    align-self: flex-start;
+    margin-bottom: 36px;
+
+    &:hover {
+        background: $light-blue;
+    }
 }
 
 .news-card__meta {

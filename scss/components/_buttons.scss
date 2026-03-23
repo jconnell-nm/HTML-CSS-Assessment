@@ -6,51 +6,16 @@
 
 // Header Buttons
 
-.header-btn-lrg {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    height: 60px;
-    padding: $spacing-sm $spacing-md;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 .support-btn {
-    @extend .header-btn-lrg;
+    @include button($light-blue, 16px, 60px);
     background: $light-blue;
     border: 2px solid $light-blue;
 }
 
 .contact-btn {
-    @extend .header-btn-lrg;
+    @include button($grey, 16px, 60px);
     background: $grey;
     border: 2px solid $grey;
-}
-
-.support-btn:hover {
-    background: darken($light-blue, 10%);
-    border-color: darken($light-blue, 10%);
-}
-
-.contact-btn:hover {
-    background: darken($grey, 10%);
-    border-color: darken($grey, 10%);
-}
-
-.header-btn-sml {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    height: 60px;
-    padding: $spacing-sm $spacing-md;
-    font-size: 24px;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 input[type="search"] {
@@ -62,7 +27,7 @@ input[type="search"] {
 
 
 .search-btn {
-    @extend .header-btn-sml;
+    @include button($grey, 16px, 60px);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background: $grey;
@@ -75,7 +40,7 @@ input[type="search"] {
 }
 
 .sidebar-btn {
-    @extend .header-btn-sml;
+    @include button($dark-blue, 16px, 60px);
     background: $dark-blue;
     border: 2px solid $dark-blue;
 }
@@ -85,6 +50,50 @@ input[type="search"] {
     border-color: darken($dark-blue, 10%);
 }
 
-// Services Panel Buttons
+// Main Carousel Buttons
+
+.slide-btn {
+    @include button($purple, 28px, 60px);
+}
+
+// Service Card Buttons
+
+// Welcome Buttons
+
+.welcome-btn {
+    @include button($midnight-blue, 28px, 60px);
+}
+
+.google-btn {
+    @include button($light-blue, 28px, 60px);
+}
+
+.trustpilot-btn {
+    @include button($light-green, 28px, 60px);
+}
+
+// News Card Buttons
+
+.news-card__btn {
+    @include button($yellow, 16px, 50px, 16px);
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 36px;
+
+    &:hover {
+        background: $yellow;
+    }
+}
+
+.news-card-career__btn {
+    @include button($light-blue, 16px, 50px, 16px);
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 36px;
+
+    &:hover {
+        background: $light-blue;
+    }
+}
 
 

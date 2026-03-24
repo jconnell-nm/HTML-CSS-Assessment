@@ -9,12 +9,11 @@
 }
 
 .title-bar {
-    max-width: 1200px;
     padding: 20px 15px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 15px;
+    width: 100%;
 }
 
 .title-bar form {
@@ -25,6 +24,7 @@
 .logo {
     flex: 0 0 auto;
     display: block;
+    margin: 0;
     height: clamp(30px, 8vw, 60px);
     width: auto;
 }
@@ -33,7 +33,8 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    margin: 0 auto;
+    margin-left: auto;
+    flex: 0 0 auto;
 }
 
 .page-layout {
@@ -450,22 +451,12 @@
 }
 
 .services-nav__dropdown-list a {
+    @include link(white);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    text-align: left;
-    text-decoration: none;
     gap: 1rem;
-    color: white;
     font-size: 1.1rem;
     font-weight: 500;
-    min-height: auto;
-    padding: 0;
-}
-
-.services-nav__dropdown-list a:hover,
-.services-nav__dropdown-list a:focus-visible {
-    text-decoration: underline;
 }
 
 .small-contact-btn {
@@ -485,6 +476,9 @@ input[type="search"]:focus {
 }
 
 @media (max-width: 1260px) {
+    .header-actions {
+        margin: 0 auto;
+    }
 
     input[type="search"] {
         display: none;

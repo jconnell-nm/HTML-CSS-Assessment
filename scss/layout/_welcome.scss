@@ -5,7 +5,7 @@
     padding-bottom: 50px;
 }
 
-.container {
+.welcome-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -38,10 +38,10 @@ p {
 }
 
 .author {
-    color: grey;
+    color: $grey;
 }
 
-.stars {
+.rating {
     color: gold;
     font-size: 50px;
     margin-bottom: 25px;
@@ -55,16 +55,11 @@ p {
 }
 
 .welcome a {
-    color: white;
-    text-decoration: none;
-}
-
-.welcome a:hover {
-    text-decoration: underline;
+    @include link(white);
 }
 
 @media (max-width: 991px) {
-    .container {
+    .welcome-container {
         flex-direction: column;
         gap: 0px;
     }

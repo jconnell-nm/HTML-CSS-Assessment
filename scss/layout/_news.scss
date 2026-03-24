@@ -8,8 +8,7 @@
 .news-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -21,18 +20,18 @@
 .news-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 38px;
+    gap: 5px;
     margin-bottom: 60px;
 }
 
 .view-all {
-    color: $dark-blue;
-    text-decoration: none;
+    @include link($dark-blue, $dark-blue);
     font-size: 1.75rem;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    margin-left: auto;
 }
 
 .view-all--bottom {

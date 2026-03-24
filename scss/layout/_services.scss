@@ -1,25 +1,11 @@
 .services {
-    padding: 50px 50px;
+    padding: 50px 0;
     background: $off-white;
-}
-
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: stretch;
-    max-width: 1400px;
-    justify-content: space-around;
-    margin: 0 auto;
-    gap: 30px;
 }
 
 .services-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    flex: 0 0 100%;
     margin-bottom: 40px;
 }
 
@@ -30,13 +16,10 @@
 }
 
 .vow {
-    text-decoration: none;
-    font-weight: 500;
+    @include link($dark-blue, $dark-blue);
+    margin-left: auto;
+    font-weight: 900;
     font-size: 2.5rem;
-}
-
-.vow:hover {
-    text-decoration: underline;
 }
 
 .vow:visited {
@@ -53,11 +36,19 @@
     }
 
     .vow-bottom {
-        display: inline-block;
+        display: block;
+        padding-top: 30px;
+        text-align: center;
     }
 }
 
-.services-container > .service-card {
+.services-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.services-grid > .service-card {
     background: white;
     border: 1px solid $grey;
     border-radius: 15px;
@@ -70,7 +61,39 @@
     flex: 1 1 250px;
 }
 
-.services-container > div span {
+.service-card {
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.consultancy-service {
+    --card-color: #{$steel-blue};
+}
+
+.it-service {
+    --card-color: #{$light-blue};
+}
+
+.marketing-service {
+    --card-color: #{$light-green};
+}
+
+.telecoms-service {
+    --card-color: #{$dark-red};
+}
+
+.web-service {
+    --card-color: #{$purple};
+}
+
+.security-service {
+    --card-color: #{$light-red};
+}
+
+.developer-service {
+    --card-color: #{$dark-red};
+}
+
+.service-card >  span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,23 +101,41 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    position: relative;
+    background: var(--card-color);
     color: white;
 }
 
-.services-container > div:not(.services-header):hover {
+.service-card:hover {
+    background: var(--card-color);
+    color: white;
     transform: translateY(-8px);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
 }
 
-.services-container > div h2 {
+.service-card:hover > span {
+    background: white;
+    color: var(--card-color);
+}
+
+.reg-btn {
+    @include button($yellow, 16px, 50px, 16px);
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.service-card:hover > .reg-btn {
+    background: white;
+    color: var(--card-color);
+}
+
+.service-card >  h2 {
     margin: 15px 0 18px;
     font-size: 1.25rem;
     line-height: 1.2;
 }
 
-.services-container > div p {
+.service-card >  p {
     margin: 0 0 28px;
     font-size: 0.85rem;
     line-height: 1.7;
@@ -102,10 +143,6 @@
 
 .reg-btn {
     @include button($yellow, 16px, 50px, 16px);
-}
-
-.consultancy-service .consultancy-icon {
-    background: $steel-blue;
 }
 
 .consultancy-service .reg-btn {

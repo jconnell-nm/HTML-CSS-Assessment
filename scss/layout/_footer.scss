@@ -8,15 +8,10 @@ footer p {
     padding: 10px;
     text-align: left;
     font-size: 14px;
+}
 
-    a {
-        color: white;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
+footer p a {
+    @include link(white);
 }
 
 .footer-bottom .line {
@@ -37,12 +32,7 @@ footer p {
 }
 
 .contact-us a {
-    color: white;
-    text-decoration: none;
-}
-
-.contact-us a:hover {
-    text-decoration: underline;
+    @include link(white);
 }
 
 .footer-container {
@@ -121,8 +111,7 @@ footer p {
 }
 
 .footer-nav a {
-    color: white;
-    text-decoration: none; 
+    @include link(white);
     font-size: 14px;
     line-height: 1.4;
 }

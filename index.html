@@ -88,18 +88,30 @@
                                 <button class="small-contact-btn">
                                     <span class="contact-icon" aria-hidden="true"></span>
                                 </button>
-                                <form action="/search" method="get">
+                                <form class="header-search header-search-desktop" action="/search" method="get">
                                     <input type="search" placeholder="Search...">
                                     <button type="submit" class="search-btn">
                                         <span class="search-icon" aria-hidden="true"></span>
                                     </button>
                                 </form>
 
-                                <button for="sidebar-toggle" class="menu-trigger" id="menuTrigger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSidebar">
+                                <button 
+                                    class="menu-trigger"
+                                    id="menuTrigger"
+                                    type="button"
+                                    aria-label="Open menu"
+                                    aria-expanded="false"
+                                    aria-controls="mobileSidebar">
                                     <span class="sidebar-icon" aria-hidden="true"></span>
                                     <span class="sidebar-close-icon" aria-hidden="true"></span>
                                 </button>
                             </div>
+                            <form class="header-search header-search-mobile" action="/search" method="get">
+                                <input type="search" placeholder="Search...">
+                                <button type="submit" class="search-btn">
+                                    <span class="search-icon" aria-hidden="true"></span>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </header>
@@ -728,5 +740,21 @@
                 </main>
             </div>
         </div>
+    <div class="cookie-banner cookie-banner--hidden" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie notice">
+        <div class="cookie-banner__content">
+            <p>
+                This website uses cookies to improve your browsing experience.
+            </p>
+
+            <div class="cookie-banner__actions">
+                <button type="button" class="cookie-btn cookie-btn--secondary" id="cookieDecline">
+                    Decline
+                </button>
+                <button type="button" class="cookie-btn cookie-btn--primary" id="cookieAccept">
+                    Accept
+                </button>
+            </div>
+        </div>
+    </div>
     </body>
 </html>

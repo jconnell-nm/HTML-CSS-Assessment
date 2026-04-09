@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    initSidebarMenu();
+    initSidebarToggle();
     initHeroCarousel();
+    initCookieBanner();
 
     // Smooth scroll for buttons
     const scrollButtons = document.querySelectorAll(".scroll-top-btn");
@@ -61,7 +62,7 @@ function initHeroCarousel() {
     showSlide(0);
 }
 
-function initSidebarMenu() {
+function initSidebarToggle() {
     const body = document.body;
     const menuTrigger = document.getElementById("menuTrigger");
     const mobileSidebar = document.getElementById("mobileSidebar");
@@ -101,4 +102,32 @@ function initSidebarMenu() {
         mobileLinks.forEach(function (link) {
         link.addEventListener("click", closeMenu);
     });
+}
+
+function initCookieBanner() {
+    const cookieBanner = document.getElementById("cookieBanner");
+    const acceptButton = document.getElementById("cookieAccept");
+    const declineButton = document.getElementById("cookieDecline");
+
+    if (!cookieBanner) return;
+
+    const cookieConsent = localStorage.getItem("cookieConsent");
+
+    if (!cookieConsent) {
+        cookieBanner.classList.remove("cookie-banner--hidden");
+    }
+
+    if (acceptButton) {
+        acceptButton.addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "accepted");
+            cookieBanner.classList.add("cookie-banner--hidden");
+        });
+    }
+
+    if (declineButton) {
+        declineButton.addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "declined");
+            cookieBanner.classList.add("cookie-banner--hidden");
+        });
+    }
 }

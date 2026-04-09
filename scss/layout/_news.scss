@@ -20,7 +20,7 @@
 .news-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 5px;
+    gap: 30px;
     margin-bottom: 60px;
 }
 

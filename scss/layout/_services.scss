@@ -61,6 +61,15 @@
     flex: 1 1 250px;
 }
 
+.service-card,
+.service-card:link,
+.service-card:visited,
+.service-card:hover,
+.service-card:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 .service-card {
     transition: background 0.2s ease, color 0.2s ease;
 }

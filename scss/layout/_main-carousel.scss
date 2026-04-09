@@ -30,15 +30,10 @@
     visibility: hidden;
 }
 
-#slide1:checked ~ .slides .slide:nth-child(1),
-#slide2:checked ~ .slides .slide:nth-child(2),
-#slide3:checked ~ .slides .slide:nth-child(3),
-#slide4:checked ~ .slides .slide:nth-child(4),
-#slide5:checked ~ .slides .slide:nth-child(5),
-#slide6:checked ~ .slides .slide:nth-child(6),
-#slide7:checked ~ .slides .slide:nth-child(7) {
+.slide.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 .slide-content {
@@ -99,7 +94,7 @@
     }
 }
 
-#slide1:checked ~ .slides .slide:nth-child(1) .slide-btn {
+.slide--1 .slide-btn {
     background: $purple;
 
     &:hover {
@@ -107,7 +102,7 @@
     }
 }
 
-#slide2:checked ~ .slides .slide:nth-child(2) .slide-btn {
+.slide--2 .slide-btn {
     background: $yellow;
 
     &:hover {
@@ -115,7 +110,7 @@
     }
 }
 
-#slide3:checked ~ .slides .slide:nth-child(3) .slide-btn {
+.slide--3 .slide-btn {
     background: $light-blue;
 
     &:hover {
@@ -123,7 +118,7 @@
     }
 }
 
-#slide4:checked ~ .slides .slide:nth-child(4) .slide-btn {
+.slide--4 .slide-btn {
     background: $light-green;
 
     &:hover {
@@ -131,7 +126,7 @@
     }
 }
 
-#slide5:checked ~ .slides .slide:nth-child(5) .slide-btn {
+.slide--5 .slide-btn {
     background: $dark-red;
 
     &:hover {
@@ -139,7 +134,7 @@
     }
 }
 
-#slide6:checked ~ .slides .slide:nth-child(6) .slide-btn {
+.slide--6 .slide-btn {
     background: $purple;
 
     &:hover {
@@ -147,7 +142,7 @@
     }
 }
 
-#slide7:checked ~ .slides .slide:nth-child(7) .slide-btn {
+.slide--7 .slide-btn {
     background: $light-red;
 
     &:hover {
@@ -175,12 +170,6 @@
     cursor: pointer;
 }
 
-#slide1:checked ~ .dots label[for="slide1"],
-#slide2:checked ~ .dots label[for="slide2"],
-#slide3:checked ~ .dots label[for="slide3"],
-#slide4:checked ~ .dots label[for="slide4"],
-#slide5:checked ~ .dots label[for="slide5"],
-#slide6:checked ~ .dots label[for="slide6"],
-#slide7:checked ~ .dots label[for="slide7"] {
+.dot.active {
     background: white;
 }

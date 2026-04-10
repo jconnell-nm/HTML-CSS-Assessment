@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initSidebarToggle();
     initHeroCarousel();
     initCookieBanner();
+    initResponsiveServicesNav();
 
     // Smooth scroll for buttons
     const scrollButtons = document.querySelectorAll(".scroll-top-btn");
@@ -130,4 +131,55 @@ function initCookieBanner() {
             cookieBanner.classList.add("cookie-banner--hidden");
         });
     }
+}
+
+function initResponsiveServicesNav() {
+    const servicesNav = document.querySelector(".services_nav");
+    const sidebarNav = document.querySelector(".mobile-sidebar__nav");
+    const contactButton = sidebarNav.querySelector(".mobile-sidebar__contact-btn");
+    const originalServicesSection = sidebarNav.querySelector(".mobile-sidebar__services");
+
+    if (!servicesNav || !sidebarNav || !contactButton) return;
+
+    const originalContainer = servicesNav.parentElement;
+    const originalNextSibling = servicesNav.nextElementSibling;
+
+    const mediaQuery = window.matchMedia("(max-width: 992px)");
+
+    function updateNavLocation(e) {
+        const isMobile = e.matches;
+
+        if (isMobile) {
+            if (servicesNav.parentElement !== sidebarNav) {
+                sidebarNav.insertBefore(servicesNav, contactButton.nextSibling);
+            }
+
+            servicesNav.classList.add("services_nav--sidebar");
+
+            if (originalServicesSection) {
+                originalServicesSection.style.display = "none";
+            }
+
+            contactButton.classList.add("is-visible");
+        } else {
+            if (servicesNav.parentElement !== originalContainer) {
+                if (originalNextSibling) {
+                    originalContainer.insertBefore(servicesNav, originalNextSibling);
+                } else {
+                    originalContainer.appendChild(servicesNav);
+                }
+            }
+
+            servicesNav.classList.remove("services_nav--sidebar");
+
+            if (originalServicesSection) {
+                originalServicesSection.style.display = "";
+            }
+
+            contactButton.classList.remove("is-visible");
+        }
+    }
+
+    updateNavLocation(mediaQuery);
+    mediaQuery.addEventListener("change", updateNavLocation);
 }

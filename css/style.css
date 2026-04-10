@@ -589,20 +589,32 @@ footer p a:hover {
   --sidebar-speed: 0.35s;
 }
 
-.site-header {
-  width: 100%;
-  background: white;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+.sticky-header {
+  position: relative;
+  z-index: 900;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.site-header.is-sticky {
+.sticky-header.is-sticky {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-body.menu-open .site-header {
+.sticky-header.is-hidden {
+  transform: translateY(-100%);
+}
+
+.site-header {
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+body.menu-open .sticky-header {
   transform: translateX(calc(var(--sidebar-width) * -1));
 }
 
@@ -665,6 +677,7 @@ body.menu-open .site-header {
   background: #333645;
   position: relative;
   margin-left: auto;
+  border: none;
   border-radius: 3px;
   display: inline-flex;
   align-items: center;
@@ -1317,15 +1330,11 @@ input[type="search"]:focus {
 
 .cookie-banner {
   position: fixed;
-  left: 20px;
-  bottom: 20px;
-  z-index: 2000;
-  width: calc(100% - 40px);
-  max-width: 420px;
-  background: white;
-  color: #333645;
-  border-radius: 10px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
 }
 
@@ -1333,54 +1342,100 @@ input[type="search"]:focus {
   display: none;
 }
 
-.cookie-banner__content p {
-  margin: 0 0 16px;
-  line-height: 1.5;
-  font-size: 1rem;
+.cookie-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-.cooke-banner__actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+.cookie-banner__box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.cookie-btn {
-  border: none;
-  border-radius: 4px;
-  padding: 12px 18px;
-  font-size: 0.95rem;
-  cursor: pointer;
+.cookie-banner__header {
+  padding: 20px;
+  border-bottom: 1px solid #e6e7e9;
 }
 
-.cookie-btn--primary {
-  background-color: #333645;
-  color: white;
-}
-
-.cookie-btn--primary:hover {
-  background-color: #1d1f28;
-}
-
-.cookie-btn--secondary {
-  background-color: #e6e7e9;
+.cookie-banner__header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
   color: #333645;
 }
 
+.cookie-banner__body {
+  padding: 22px 20px;
+  border-bottom: 1px solid #e6e7e9;
+}
+
+.cookie-banner__body p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #999AA2;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.cookie-btn {
+  flex: 1;
+  border: none;
+  border-radius: 3px;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+.cookie-btn--secondary {
+  background: #999AA2;
+  color: white;
+}
+
 .cookie-btn--secondary:hover {
-  background-color: #cbcdd1;
+  background: #7e808a;
+}
+
+.cookie-btn--primary {
+  background: #926fb1;
+  color: #fff;
+}
+
+.cookie-btn--primary:hover {
+  background: #79539a;
+}
+
+body.cookie-modal-open {
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
   .cookie-banner {
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    width: auto;
-    max-width: none;
+    padding: 15px;
+    align-items: flex-end;
+  }
+  .cookie-banner__box {
+    max-width: 100%;
+  }
+  .cookie-banner__header h2 {
+    font-size: 1.8rem;
   }
   .cookie-banner__actions {
     flex-direction: column;
+    gap: 15px;
   }
   .cookie-btn {
     width: 100%;
@@ -1806,7 +1861,7 @@ input[type="search"]:focus {
   display: flex;
   gap: 80px;
   width: max-content;
-  animation: scroll 20s steps(6) infinite;
+  animation: scroll 24s steps(6) infinite;
 }
 
 .view-our-work .slider-item {
@@ -1854,7 +1909,7 @@ input[type="search"]:focus {
   display: flex;
   gap: 80px;
   width: max-content;
-  animation: scroll 20s steps(6) infinite;
+  animation: scroll 24s steps(6) infinite;
 }
 
 .company-slider img {

@@ -75,51 +75,51 @@
             </aside>
 
             <div class="page-content">
-                <header class="site-header">
-                    <div class="container">
-                        <div class="title-bar">
-                            <a href="#"><img class="logo"src="img/f-logo.webp" alt="Netmatters"></a>
-                            <div class="header-actions">
-                                <button class="support-btn">
-                                    <span class="support-icon" aria-hidden="true"></span>
-                                    SUPPORT
-                                </button>
-                                <button class="contact-btn">
-                                    <span class="contact-icon" aria-hidden="true"></span>
-                                    CONTACT
-                                </button>
-                                <button class="small-contact-btn">
-                                    <span class="contact-icon" aria-hidden="true"></span>
-                                </button>
-                                <form class="header-search header-search-desktop" action="/search" method="get">
+                <div class="sticky-header" id="stickyHeader">
+                    <header class="site-header">
+                        <div class="container">
+                            <div class="title-bar">
+                                <a href="#"><img class="logo"src="img/f-logo.webp" alt="Netmatters"></a>
+                                <div class="header-actions">
+                                    <button class="support-btn">
+                                        <span class="support-icon" aria-hidden="true"></span>
+                                        SUPPORT
+                                    </button>
+                                    <button class="contact-btn">
+                                        <span class="contact-icon" aria-hidden="true"></span>
+                                        CONTACT
+                                    </button>
+                                    <button class="small-contact-btn">
+                                        <span class="contact-icon" aria-hidden="true"></span>
+                                    </button>
+                                    <form class="header-search header-search-desktop" action="/search" method="get">
+                                        <input type="search" placeholder="Search...">
+                                        <button type="submit" class="search-btn">
+                                            <span class="search-icon" aria-hidden="true"></span>
+                                        </button>
+                                    </form>
+
+                                    <button 
+                                        class="menu-trigger"
+                                        id="menuTrigger"
+                                        type="button"
+                                        aria-label="Open menu"
+                                        aria-expanded="false"
+                                        aria-controls="mobileSidebar">
+                                        <span class="sidebar-icon" aria-hidden="true"></span>
+                                        <span class="sidebar-close-icon" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <form class="header-search header-search-mobile" action="/search" method="get">
                                     <input type="search" placeholder="Search...">
                                     <button type="submit" class="search-btn">
                                         <span class="search-icon" aria-hidden="true"></span>
                                     </button>
                                 </form>
-
-                                <button 
-                                    class="menu-trigger"
-                                    id="menuTrigger"
-                                    type="button"
-                                    aria-label="Open menu"
-                                    aria-expanded="false"
-                                    aria-controls="mobileSidebar">
-                                    <span class="sidebar-icon" aria-hidden="true"></span>
-                                    <span class="sidebar-close-icon" aria-hidden="true"></span>
-                                </button>
                             </div>
-                            <form class="header-search header-search-mobile" action="/search" method="get">
-                                <input type="search" placeholder="Search...">
-                                <button type="submit" class="search-btn">
-                                    <span class="search-icon" aria-hidden="true"></span>
-                                </button>
-                            </form>
                         </div>
-                    </div>
-                </header>
+                    </header>
 
-                <main class="page-body">
                     <nav class="services_nav" id="servicesNav">
                         <div class="container">
                             <ul class="services-nav__list">
@@ -285,7 +285,9 @@
                             </ul>
                         </div>
                     </nav>
+                </div>
 
+                <main class="page-body">
                     <div class="main-carousel">
                         <div class="slides">
                             <div class="slide slide--1 active" style="background-image: linear-gradient(
@@ -743,18 +745,30 @@
                 </main>
             </div>
         </div>
-    <div class="cookie-banner cookie-banner--hidden" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie notice">
-        <div class="cookie-banner__content">
-            <p>
-                This website uses cookies to improve your browsing experience.
-            </p>
+    <div class="cookie-banner cookie-banner--hidden" id="cookieBanner" role="dialog" aria-modal="true" aria-labelledby="cookieTitle">
+        <div class="cookie-banner__overlay"></div>
+
+        <div class="cookie-banner__box">
+            <div class="cookie-banner__header">
+                <h2 id="cookieTitle">Cookies Policy</h2>
+            </div>
+
+            <div class="cookie-banner__body">
+                <p>
+                    Our website uses cookies. This helps us provide you with a good
+                    experience on our website. To see what cookies we use and what
+                    they do, and to opt-in on non-essential cookies click "change
+                    settings". For a detailed explanation, click on "Privacy Policy"
+                    otherwise click "Accept Cookies" to enter.
+                </p>
+            </div>
 
             <div class="cookie-banner__actions">
                 <button type="button" class="cookie-btn cookie-btn--secondary" id="cookieDecline">
-                    Decline
+                    CHANGE SETTINGS
                 </button>
                 <button type="button" class="cookie-btn cookie-btn--primary" id="cookieAccept">
-                    Accept
+                    ACCEPT COOKIES
                 </button>
             </div>
         </div>

@@ -3,20 +3,32 @@
     --sidebar-speed: 0.35s;
 }
 
+.sticky-header {
+  position: relative;
+  z-index: 900;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky-header.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sticky-header.is-hidden {
+  transform: translateY(-100%);
+}
+
 .site-header {
-    width: 100%;
-    background: white;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background: white;
+  position: relative;
+  z-index: 2;
 }
 
-.site-header.is-sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-body.menu-open .site-header {
+body.menu-open .sticky-header {
     transform: translateX(calc(var(--sidebar-width) * -1));
 }
 
@@ -81,6 +93,7 @@ body.menu-open .site-header {
     background: $dark-blue;
     position: relative;
     margin-left: auto;
+    border: none;
     border-radius: 3px;
     display: inline-flex;
     align-items: center;
@@ -746,75 +759,119 @@ input[type="search"]:focus {
 }
 
 .cookie-banner {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 2000;
-    width: calc(100% - 40px);
-    max-width: 420px;
-    background: white;
-    color: $dark-blue;
-    border-radius: 10px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .cookie-banner--hidden {
-    display: none;
+  display: none;
 }
 
-.cookie-banner__content p {
-    margin: 0 0 16px;
-    line-height: 1.5;
-    font-size: 1rem;
+.cookie-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
 }
 
-.cooke-banner__actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+.cookie-banner__box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cookie-banner__header {
+  padding: 20px;
+  border-bottom: 1px solid $light-grey;
+}
+
+.cookie-banner__header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  color: $dark-blue;
+}
+
+.cookie-banner__body {
+  padding: 22px 20px;
+  border-bottom: 1px solid $light-grey;
+}
+
+.cookie-banner__body p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: $grey;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
 }
 
 .cookie-btn {
-    border: none;
-    border-radius: 4px;
-    padding: 12px 18px;
-    font-size: 0.95rem;
-    cursor: pointer;
-}
-
-.cookie-btn--primary {
-    background-color: $dark-blue;
-    color: white;
-}
-
-.cookie-btn--primary:hover {
-    background-color: darken($dark-blue, 10%);
+  flex: 1;
+  border: none;
+  border-radius: 3px;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
 }
 
 .cookie-btn--secondary {
-    background-color: $light-grey;
-    color: $dark-blue;
+  background: $grey;
+  color: white;
 }
 
 .cookie-btn--secondary:hover {
-    background-color: darken($light-grey, 10%);
+  background: darken($grey, 10%);
+}
+
+.cookie-btn--primary {
+  background: $purple;
+  color: #fff;
+}
+
+.cookie-btn--primary:hover {
+  background: darken($purple, 10%);
+}
+
+body.cookie-modal-open {
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
-    .cookie-banner {
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
-        width: auto;
-        max-width: none;
-    }
+  .cookie-banner {
+    padding: 15px;
+    align-items: flex-end;
+  }
 
-    .cookie-banner__actions {
-        flex-direction: column;
-    }
+  .cookie-banner__box {
+    max-width: 100%;
+  }
 
-    .cookie-btn {
-        width: 100%;
-    }
+  .cookie-banner__header h2 {
+    font-size: 1.8rem;
+  }
+
+  .cookie-banner__actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cookie-btn {
+    width: 100%;
+  }
 }

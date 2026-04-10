@@ -21,16 +21,39 @@ $(function () {
 });
 
 function initStickyHeader() {
-  const $header = $(".site-header");
-  const $pageContent = $(".page-content");
-  const headerHeight = $header.outerHeight();
+    const stickyHeader = document.getElementById("stickyHeader");
+    const pageContent = document.querySelector(".page-content");
 
-  $(window).on("scroll", function () {
-    const isSticky = $(window).scrollTop() > 0;
+    if (!stickyHeader || !pageContent) return;
 
-    $header.toggleClass("is-sticky", isSticky);
-    $pageContent.css("padding-top", isSticky ? headerHeight + "px" : "0");
-  });
+    let lastScrollY = window.scrollY;
+
+    function updateStickyHeader() {
+        const currentScrollY = window.scrollY;
+        const headerHeight = stickyHeader.offsetHeight;
+
+        if (currentScrollY > 0) {
+            stickyHeader.classList.add("is-sticky");
+            pageContent.style.paddingTop = headerHeight + "px";
+        } else {
+            stickyHeader.classList.remove("is-sticky");
+            stickyHeader.classList.remove("is-hidden");
+            pageContent.style.paddingTop = "0";
+        }
+
+        if (currentScrollY > lastScrollY && currentScrollY > headerHeight) {
+            stickyHeader.classList.add("is-hidden");
+        } else {
+            stickyHeader.classList.remove("is-hidden");
+        }
+
+        lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener("scroll", updateStickyHeader);
+    window.addEventListener("resize", updateStickyHeader);
+
+    updateStickyHeader();
 }
 
 function initHeroCarousel() {
@@ -98,11 +121,6 @@ function initSidebarToggle() {
             closeMenu();
         }
     });
-
-    const mobileLinks = document.querySelectorAll(".mobile-sidebar a");
-        mobileLinks.forEach(function (link) {
-        link.addEventListener("click", closeMenu);
-    });
 }
 
 function initCookieBanner() {
@@ -114,21 +132,31 @@ function initCookieBanner() {
 
     const cookieConsent = localStorage.getItem("cookieConsent");
 
-    if (!cookieConsent) {
+    function openBanner() {
         cookieBanner.classList.remove("cookie-banner--hidden");
+        document.body.classList.add("cookie-modal-open");
+    }
+
+    function closeBanner() {
+        cookieBanner.classList.add("cookie-banner--hidden");
+        document.body.classList.remove("cookie-modal-open");
+    }
+
+    if (!cookieConsent) {
+        openBanner();
     }
 
     if (acceptButton) {
         acceptButton.addEventListener("click", function () {
             localStorage.setItem("cookieConsent", "accepted");
-            cookieBanner.classList.add("cookie-banner--hidden");
+            closeBanner();
         });
     }
 
     if (declineButton) {
         declineButton.addEventListener("click", function () {
             localStorage.setItem("cookieConsent", "declined");
-            cookieBanner.classList.add("cookie-banner--hidden");
+            closeBanner();
         });
     }
 }

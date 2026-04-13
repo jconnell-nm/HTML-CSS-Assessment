@@ -4,7 +4,6 @@
     padding: 0 20px 50px;
 
     .slider {
-        overflow: hidden;
         width: 100%;
     }
 
@@ -12,7 +11,8 @@
         display: flex;
         gap: 80px;
         width: max-content;
-        animation: scroll 24s steps(6) infinite;
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
     }
 }
 

@@ -1194,7 +1194,7 @@ body.menu-open {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   background: #333645;
-  color: #fff;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.125rem;
@@ -1411,7 +1411,7 @@ input[type="search"]:focus {
 
 .cookie-btn--primary {
   background: #926fb1;
-  color: #fff;
+  color: white;
 }
 
 .cookie-btn--primary:hover {
@@ -1472,6 +1472,8 @@ body.cookie-modal-open {
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 .slide.active {
@@ -1853,7 +1855,6 @@ body.cookie-modal-open {
 }
 
 .view-our-work .slider {
-  overflow: hidden;
   width: 100%;
 }
 
@@ -1861,7 +1862,8 @@ body.cookie-modal-open {
   display: flex;
   gap: 80px;
   width: max-content;
-  animation: scroll 24s steps(6) infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .view-our-work .slider-item {
@@ -1879,19 +1881,11 @@ body.cookie-modal-open {
   top: 0;
   left: 0;
   opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .view-our-work .slider-item:hover .award-colour {
   opacity: 1;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }
 
 .company-slider {
@@ -1901,7 +1895,6 @@ body.cookie-modal-open {
 }
 
 .company-slider .slider {
-  overflow: hidden;
   width: 100%;
 }
 
@@ -1909,25 +1902,139 @@ body.cookie-modal-open {
   display: flex;
   gap: 80px;
   width: max-content;
-  animation: scroll 24s steps(6) infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .company-slider img {
   height: 65px;
   filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .company-slider img:hover {
   filter: grayscale(0%);
+  transform: translateY(-2px);
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+.company-slider .company-item {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-slider .company-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 50px;
+}
+
+.company-slider .company-popup {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 50px);
+  transform: translateX(-50%) translateY(10px);
+  width: 300px;
+  width: 80vw;
+  max-width: 350px;
+  background: #333645;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+  z-index: 20;
+  box-sizing: border-box;
+}
+
+.company-slider .company-item:hover .company-popup {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.company-slider .company-popup::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 35px solid #333645;
+}
+
+.company-slider .company-popup h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.company-slider .company-popup p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  padding: 0;
+  margin: 20px;
+}
+
+.company-slider .popup-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background: #4183d7;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.company-slider .popup-btn:hover,
+.company-slider .popup-btn:focus {
+  background: #2c75d2;
+}
+
+.company-slider .popup-btn--green {
+  background: #4caf50;
+}
+
+.company-slider .popup-btn--green:hover,
+.company-slider .popup-btn--green:focus {
+  background: #449d48;
+}
+
+.company-slider .popup-btn--purple {
+  background: #926fb1;
+}
+
+.company-slider .popup-btn--purple:hover,
+.company-slider .popup-btn--purple:focus {
+  background: #855ea8;
+}
+
+.company-slider .popup-btn--yellow {
+  background: #f7b322;
+}
+
+.company-slider .popup-btn--yellow:hover,
+.company-slider .popup-btn--yellow:focus {
+  background: #f6ab09;
 }
 
 .welcome {

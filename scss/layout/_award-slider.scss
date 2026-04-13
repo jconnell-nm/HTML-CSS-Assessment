@@ -17,17 +17,9 @@
     top: 0;
     left: 0;
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .view-our-work .slider-item:hover .award-colour {
     opacity: 1;
-}
-
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
 }

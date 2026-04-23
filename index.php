@@ -1,3 +1,13 @@
+<?php
+require_once __DIR__ . '/database.php';
+
+$stmt = $pdo->query("
+    SELECT id, type, image, title, description, button, author_image, author, date FROM news
+");
+
+$newsItems = $stmt->fetchAll();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -549,68 +559,48 @@
                             </div>
 
                             <div class="news-grid">
-                                <a href="#" class="news-card">
-                                    <div class="news-card__media">
-                                        <img src="img/news-1.webp" alt="Increase Exit Value With Bespoke Software">
-                                        <span class="news-card__tag">Insights</span>
-                                    </div>
-                                    <div class="news-card__content">
-                                        <h2>How Much Could Bespoke Software Add to Your E...</h2>
-                                        <p>If you're a Managing Director or Senior Manager preparing your business for exit, you know that</p>
+                                <?php foreach ($newsItems as $item): ?>
+                                    <?php $isCareer = $item['type'] === 'Careers'; ?>
+                                    <a href="#"class="news-card <?= $isCareer ? 'news-card__career' : '' ?>">
 
-                                        <span class="news-card__btn">READ MORE</span>
+                                        <div class="news-card__media">
+                                            <img
+                                                src="<?= htmlspecialchars('img/' . $item['image']) ?>"
+                                                alt="<?= htmlspecialchars($item['title']) ?>"
+                                            >
 
-                                        <div class="news-card__meta">
-                                            <img class="news-card__avatar" src="img/nm-icon.webp" alt="Netmatters Avatar">
-                                            <div>
-                                                <strong>Posted by Netmatters</strong>
-                                                <span>27th June 2025</span>
+                                            <span class="news-card__tag <?= $isCareer ? 'news-card__tag--career' : '' ?>">
+                                                <?= htmlspecialchars($item['type']) ?>
+                                            </span>
+                                        </div>
+
+                                        <div class="news-card__content">
+                                            <h2><?= htmlspecialchars($item['title']) ?></h2>
+
+                                            <p><?= htmlspecialchars($item['description']) ?></p>
+
+                                            <span class="<?= $isCareer ? 'news-card-career__btn' : 'news-card__btn' ?>">
+                                                Read More
+                                            </span>
+
+                                            <div class="news-card__meta">
+                                                <img
+                                                    class="news-card__avatar"
+                                                    src="<?= htmlspecialchars('img/' . $item['author_image']) ?>"
+                                                    alt="<?= htmlspecialchars($item['author']) ?>"
+                                                >
+
+                                                <div>
+                                                    <strong>Posted by <?= htmlspecialchars($item['author']) ?></strong>
+
+                                                    <span>
+                                                        <?= date('jS F Y', strtotime($item['date'])) ?>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="news-card">
-                                    <div class="news-card__media">
-                                        <img src="img/news-2.webp" alt="How Can AI Benefit My Business?">
-                                        <span class="news-card__tag">Insights</span>
-                                    </div>
-                                    <div class="news-card__content">
-                                        <h2>How Can AI Benefit My Business?</h2>
-                                        <p>The idea of integrating AI into your business operations may seem daunting, but there are undeniable...</p>
-
-                                        <span class="news-card__btn">Read More</span>
-
-                                        <div class="news-card__meta">
-                                            <img class="news-card__avatar" src="img/nm-icon.webp" alt="Netmatters Avatar">
-                                            <div>
-                                                <strong>Posted by Netmatters</strong>
-                                                <span>26th June 2025</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="#" class="news-card news-card__career">
-                                    <div class="news-card__media">
-                                        <img src="img/news-3.png" alt="1st Line Technician">
-                                        <span class="news-card__tag news-card__tag--career">Careers</span>
-                                    </div>
-                                    <div class="news-card__content">
-                                        <h2>1st Line Technician</h2>
-                                        <p>Salary Range £25,000 - £29,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham,...</p>
-
-                                        <span class="news-card-career__btn">Read More</span>
-
-                                        <div class="news-card__meta">
-                                            <img class="news-card__avatar" src="img/news-poster-icon.webp" alt="Netmatters Profile Avatar">
-                                            <div>
-                                                <strong>Posted by Netmatters</strong>
-                                                <span>27th June 2025</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                <?php endforeach; ?>
                             </div>
                             <a class="view-all view-all--bottom" href="#">View All &#8594;</a>
                         </div>

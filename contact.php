@@ -23,10 +23,14 @@
                     </div>
                 </section>
 
-                <section class="offices-section">
+                <div class="page-title-banner">
                     <div class="container">
                         <h1>Our Offices</h1>
+                    </div>
+                </div>
 
+                <section class="offices-section">
+                    <div class="container">
                         <div class="offices-grid">
                             <article class="office-card">
                                 <a class=office-card__image href="#">
@@ -114,7 +118,7 @@
 
                                         <div class="form-group">
                                             <label for="telephone">Your Telephone Number <span>*</span></label>
-                                            <input type="text" id="telephone" name="telephone" required>
+                                            <input type="text" id="phone" name="phone" required>
                                         </div>
                                     </div>
 
@@ -152,7 +156,6 @@
                                 <div class="contact-details__accordion">
                                     <button type="button" class="contact-details__toggle">
                                         Out of Hours IT Support &#x2193;
-                                        <i class="fa-solid fa-chevron-down"></i>
                                     </button>
 
                                     <div class="contact-details__content">

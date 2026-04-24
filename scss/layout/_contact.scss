@@ -1,8 +1,25 @@
 .contact-breadcrumb {
+    position: relative;
     background: white;
     padding: 14px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-top: 1px solid $light-grey;
+}
+
+.contact-breadcrumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 10px;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.05),
+        transparent
+    );
+
+    pointer-events: none;
 }
 
 .contact-breadcrumb p {
@@ -25,16 +42,33 @@
     margin: 0 10px;
 }
 
-.offices-section {
-    padding: 50px 0 40px;
-    background: $off-white;
-}
-
-.offices-section h1 {
+.title-panel {
     font-size: 2.25rem;
     font-weight: 400;
     margin: 0 0 60px;
     color: $dark-blue;
+}
+
+.page-title-banner {
+    background: $off-white;
+    width: 100%;
+}
+
+.page-title-banner .container {
+    padding: 40px 25px 20px;
+}
+
+.page-title-banner h1 {
+    margin: 0;
+    color: $dark-blue;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.offices-section {
+    padding: 50px 0 40px;
+    background: $off-white;
 }
 
 .offices-grid {
@@ -301,15 +335,7 @@
     border: none;
     padding: 0;
     cursor: pointer;
-
     font-size: 1.1rem;
-    font-weight: 600;
-    color: $dark-blue;
-}
-
-.contact-details__toggle i,
-.contact-details__toggle svg {
-    font-size: 18px;
     color: $dark-blue;
 }
 
@@ -346,6 +372,18 @@
 }
 
 @media (max-width: 991px) {
+    .page-title-banner {
+        background: $dark-blue;
+    }
+
+    .page-title-banner .container {
+        padding: 20px 25px;
+    }
+
+    .page-title-banner h1 {
+        color: white;
+    }
+
     .offices-grid {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -367,6 +405,10 @@
 }
 
 @media (max-width: 767px) {
+    .contact-breadcrumb {
+        display: none;
+    }
+
     .office-card__body {
         padding: 25px;
     }

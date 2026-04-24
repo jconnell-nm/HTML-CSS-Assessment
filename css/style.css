@@ -2404,6 +2404,50 @@ p {
   cursor: pointer;
 }
 
+.contact-details__accordion {
+  margin-top: 30px;
+}
+
+.contact-details__toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333645;
+}
+
+.contact-details__toggle i,
+.contact-details__toggle svg {
+  font-size: 18px;
+  color: #333645;
+}
+
+.contact-details__content {
+  margin-top: 20px;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-details__content p {
+  margin-bottom: 25px;
+  color: #6A6C6E;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.contact-details__content strong {
+  display: block;
+  margin: 20px 0;
+  color: #333645;
+  font-size: 1.1rem;
+}
+
 @media (max-width: 1260px) {
   .contact-content__grid {
     grid-template-columns: 1fr;

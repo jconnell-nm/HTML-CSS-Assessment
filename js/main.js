@@ -4,17 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     initCookieBanner();
     initResponsiveServicesNav();
     initInfiniteSliders();
-
-    // Smooth scroll for buttons
-    const scrollButtons = document.querySelectorAll(".scroll-top-btn");
-    scrollButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
-        });
-    });
+    initSmoothScroll();
+    initContactAccordion();
 });
 
 $(function () {
@@ -291,6 +282,10 @@ function initSidebarToggle() {
     const mobileSidebar = document.getElementById("mobileSidebar");
     const sidebarOverlay = document.querySelector(".sidebar-overlay");
 
+    console.log(mobileSidebar);
+
+    if (!menuTrigger || !mobileSidebar || !sidebarOverlay) return;
+
     function openMenu() {
         body.classList.add("menu-open");
         menuTrigger.setAttribute("aria-expanded", "true");
@@ -363,10 +358,13 @@ function initCookieBanner() {
 function initResponsiveServicesNav() {
     const servicesNav = document.querySelector(".services_nav");
     const sidebarNav = document.querySelector(".mobile-sidebar__nav");
+
+    if (!servicesNav || !sidebarNav) return;
+
     const contactButton = sidebarNav.querySelector(".mobile-sidebar__contact-btn");
     const originalServicesSection = sidebarNav.querySelector(".mobile-sidebar__services");
 
-    if (!servicesNav || !sidebarNav || !contactButton) return;
+    if (!contactButton || !originalServicesSection) return;
 
     const originalContainer = servicesNav.parentElement;
     const originalNextSibling = servicesNav.nextElementSibling;
@@ -409,4 +407,59 @@ function initResponsiveServicesNav() {
 
     updateNavLocation(mediaQuery);
     mediaQuery.addEventListener("change", updateNavLocation);
+}
+function initSmoothScroll() {
+    const scrollButtons = document.querySelectorAll(".scroll-top-btn");
+
+    if (!scrollButtons.length) return;
+
+    scrollButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+    });
+}
+
+function initContactAccordion() {
+    const accordion = document.querySelector(".contact-details__accordion");
+
+    if (!accordion) return;
+
+    const toggle = accordion.querySelector(".contact-details__toggle");
+    const content = accordion.querySelector(".contact-details__content");
+
+    if (!toggle || !content) return;
+
+    // Start closed
+    content.style.height = "0px";
+    content.style.overflow = "hidden";
+
+    toggle.addEventListener("click", () => {
+        const isOpen = accordion.classList.contains("is-open");
+
+        if (isOpen) {
+            // CLOSE
+            content.style.height = content.scrollHeight + "px"; // set current height
+            requestAnimationFrame(() => {
+                content.style.height = "0px";
+            });
+            accordion.classList.remove("is-open");
+        } else {
+            // OPEN
+            content.style.height = content.scrollHeight + "px";
+            accordion.classList.add("is-open");
+        }
+    });
+
+    // Clean up inline height after opening (so content can resize naturally)
+    content.addEventListener("transitionend", (e) => {
+        if (e.propertyName !== "height") return;
+
+        if (accordion.classList.contains("is-open")) {
+            content.style.height = "auto";
+        }
+    });
 }

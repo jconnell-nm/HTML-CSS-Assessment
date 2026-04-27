@@ -1,3 +1,65 @@
+<?php
+require_once __DIR__ . '/database.php';
+
+$errors = [];
+$success = isset($_GET['success']);
+
+$name = '';
+$company = '';
+$email = '';
+$phone = '';
+$message = '';
+$marketing = 0;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = trim($_POST['name'] ?? '');
+    $company = trim($_POST['company'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $phone = trim($_POST['phone'] ?? '');
+    $message = trim($_POST['message'] ?? '');
+    $marketing = isset($_POST['marketing']) ? 1 : 0;
+
+    if ($name === '') {
+        $errors[] = 'Name is required.';
+    }
+
+    if ($email === '') {
+        $errors[] = 'Email is required.';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Please enter a valid email address.';
+    }
+
+    if ($phone === '') {
+        $errors[] = 'Telephone number is required.';
+    }
+
+    if ($message === '') {
+        $errors[] = 'Message is required.';
+    }
+
+    if (empty($errors)) {
+        $stmt = $pdo->prepare("
+            INSERT INTO contactForm 
+            (name, company, email, phone, message, marketing)
+            VALUES 
+            (:name, :company, :email, :phone, :message, :marketing)
+        ");
+
+        $stmt->execute([
+            ':name' => $name,
+            ':company' => $company,
+            ':email' => $email,
+            ':phone' => $phone,
+            ':message' => $message,
+            ':marketing' => $marketing
+        ]);
+
+        header("Location: contact.php?success=1");
+        exit;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,36 +161,49 @@
                     <div class="container">
                         <div class="contact-content__grid">
                             <div class="contact-form-wrap">
-                                <form class="contact-form" action="#" method="post">
+                                <?php if ($success): ?>
+                                    <div class="form-success">
+                                        Your enquiry has been sent successfully.
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($errors)): ?>
+                                    <div class="form-errors">
+                                        <?php foreach ($errors as $error): ?>
+                                            <p><?= htmlspecialchars($error) ?></p>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+                                <form class="contact-form" action="contact.php" method="post" novalidate>
                                     <div class="contact-form__grid">
                                         <div class="form-group">
                                             <label for="name">Your Name <span>*</span></label>
-                                            <input type="text" id="name" name="name" required>
+                                            <input type="text" id="name" name="name" value="<?= htmlspecialchars($name) ?>" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="company">Company Name</label>
-                                            <input type="text" id="company" name="company">
+                                            <input type="text" id="company" name="company" value="<?= htmlspecialchars($company) ?>">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="email">Your Email <span>*</span></label>
-                                            <input type="email" id="email" name="email" required>
+                                            <input type="email" id="email" name="email" value="<?= htmlspecialchars($email) ?>" required>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="telephone">Your Telephone Number <span>*</span></label>
-                                            <input type="text" id="phone" name="phone" required>
+                                            <label for="phone">Your Telephone Number <span>*</span></label>
+                                            <input type="text" id="phone" name="phone" value="<?= htmlspecialchars($phone) ?>" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group form-group--full">
                                         <label for="message">Message <span>*</span></label>
-                                        <textarea id="message" name="message" rows="6" required></textarea>
+                                        <textarea id="message" name="message" rows="6" required><?= htmlspecialchars($message) ?></textarea>
                                     </div>
 
                                     <label class="marketing-check">
-                                        <input type="checkbox" name="marketing">
+                                        <input type="checkbox" name="marketing" <?= $marketing ? 'checked' : '' ?>>
                                         <span class="marketing-check__box"></span>
                                         <span class="marketing-check__text">
                                             Please tick this box if you wish to receive marketing information from us.

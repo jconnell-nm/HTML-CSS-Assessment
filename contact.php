@@ -1,8 +1,18 @@
 <?php
+session_start();
+
 require_once __DIR__ . '/database.php';
 
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 $errors = [];
-$success = isset($_GET['success']);
+$success = isset($_GET['success']) && $_SERVER["REQUEST_METHOD"] !== "POST";
+
+function clean_input($data) {
+    return htmlspecialchars(strip_tags(trim($data)));
+}
 
 $name = '';
 $company = '';
@@ -12,29 +22,67 @@ $message = '';
 $marketing = 0;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = trim($_POST['name'] ?? '');
-    $company = trim($_POST['company'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $phone = trim($_POST['phone'] ?? '');
-    $message = trim($_POST['message'] ?? '');
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        $errors[] = "Invalid form submission.";
+    }
+
+    if (!empty($_POST['website'])) {
+        $errors[] = "Spam detected.";
+    }
+
+    $name = clean_input($_POST['name'] ?? '');
+    $company = clean_input($_POST['company'] ?? '');
+    $email = clean_input($_POST['email'] ?? '');
+    $phone = clean_input($_POST['phone'] ?? '');
+    $message = clean_input($_POST['message'] ?? '');
     $marketing = isset($_POST['marketing']) ? 1 : 0;
 
-    if ($name === '') {
-        $errors[] = 'Name is required.';
+    if (empty($name)) {
+        $errors[] = "Name is required.";
     }
 
-    if ($email === '') {
-        $errors[] = 'Email is required.';
+    if (empty($email)) {
+        $errors[] = "Email is required.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Please enter a valid email address.';
+        $errors[] = "Please enter a valid email address.";
+    } else {
+        $domain = substr(strrchr($email, "@"), 1);
+
+        if (!checkdnsrr($domain, "MX")) {
+            $errors[] = "Please enter an email address with a valid domain.";
+        }
     }
 
-    if ($phone === '') {
-        $errors[] = 'Telephone number is required.';
+    if (empty($phone)) {
+        $errors[] = "Phone number is required.";
+    } elseif (!preg_match('/^[0-9+\-\s()]{7,20}$/', $phone)) {
+        $errors[] = "Please enter a valid phone number.";
     }
 
-    if ($message === '') {
-        $errors[] = 'Message is required.';
+    if (empty($message)) {
+        $errors[] = "Message is required.";
+    }
+
+    if (strlen($name) > 100) {
+        $errors[] = "Name must be under 100 characters.";
+    }
+
+    if (strlen($message) > 1000) {
+        $errors[] = "Message must be under 1000 characters.";
+    }
+
+    $bad_patterns = ['<script', 'DROP TABLE', 'SELECT *', '--'];
+
+    foreach ($bad_patterns as $pattern) {
+        if (
+            stripos($name, $pattern) !== false ||
+            stripos($email, $pattern) !== false ||
+            stripos($phone, $pattern) !== false ||
+            stripos($message, $pattern) !== false
+        ) {
+            $errors[] = "Suspicious content was detected. Please remove it and try again.";
+            break;
+        }
     }
 
     if (empty($errors)) {
@@ -54,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':marketing' => $marketing
         ]);
 
-        header("Location: contact.php?success=1");
+        header("Location: contact.php?success=1#contact-form");
         exit;
     }
 }
@@ -160,46 +208,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <section class="contact-content">
                     <div class="container">
                         <div class="contact-content__grid">
-                            <div class="contact-form-wrap">
+                            <div class="contact-form-wrap" id="contact-form">
+                                <?php if (!empty($errors)): ?>
+                                    <div class="form-errors">
+                                        <?php foreach ($errors as $error): ?>
+                                            <p><?= htmlspecialchars($error); ?></p>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+
                                 <?php if ($success): ?>
                                     <div class="form-success">
                                         Your enquiry has been sent successfully.
                                     </div>
                                 <?php endif; ?>
-
-                                <?php if (!empty($errors)): ?>
-                                    <div class="form-errors">
-                                        <?php foreach ($errors as $error): ?>
-                                            <p><?= htmlspecialchars($error) ?></p>
-                                        <?php endforeach; ?>
-                                    </div>
-                                <?php endif; ?>
-                                <form class="contact-form" action="contact.php" method="post" novalidate>
+                                <form class="contact-form" action="contact.php#contact-form" method="post" novalidate>
+                                    <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
+                                    <input type="text" name="website" style="display:none;">
                                     <div class="contact-form__grid">
                                         <div class="form-group">
                                             <label for="name">Your Name <span>*</span></label>
-                                            <input type="text" id="name" name="name" value="<?= htmlspecialchars($name) ?>" required>
+                                            <input type="text" name="name" value="<?= htmlspecialchars($name ?? ''); ?>">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="company">Company Name</label>
-                                            <input type="text" id="company" name="company" value="<?= htmlspecialchars($company) ?>">
+                                            <input type="text" name="company" value="<?= htmlspecialchars($company ?? ''); ?>">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="email">Your Email <span>*</span></label>
-                                            <input type="email" id="email" name="email" value="<?= htmlspecialchars($email) ?>" required>
+                                            <input type="email" id="email" name="email" value="<?= htmlspecialchars($email ?? ''); ?>" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="phone">Your Telephone Number <span>*</span></label>
-                                            <input type="text" id="phone" name="phone" value="<?= htmlspecialchars($phone) ?>" required>
+                                            <input type="text" id="phone" name="phone" value="<?= htmlspecialchars($phone ?? ''); ?>" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group form-group--full">
                                         <label for="message">Message <span>*</span></label>
-                                        <textarea id="message" name="message" rows="6" required><?= htmlspecialchars($message) ?></textarea>
+                                        <textarea id="message" name="message" rows="6" required><?= htmlspecialchars($message ?? ''); ?></textarea>
                                     </div>
 
                                     <label class="marketing-check">

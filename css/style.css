@@ -2344,10 +2344,23 @@ p {
   flex: 0 0 34px;
   margin-top: 3px;
   background: white;
+  position: relative;
 }
 
 .marketing-check input:checked + .marketing-check__box {
   background: #333645;
+}
+
+.marketing-check input:checked + .marketing-check__box::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 3px;
+  width: 7.5px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
 .marketing-check__text {

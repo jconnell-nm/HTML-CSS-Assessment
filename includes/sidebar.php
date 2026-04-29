@@ -2,7 +2,7 @@
     <aside class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
         <div class="mobile-sidebar__inner">
             <nav class="mobile-sidebar__nav">
-                <a href="#" class="mobile-sidebar__contact-btn">
+                <a href="contact.php" class="mobile-sidebar__contact-btn">
                     Contact Us
                 </a>
                 <div class="mobile-sidebar__section mobile-sidebar__services">

@@ -409,6 +409,7 @@ function initResponsiveServicesNav() {
     updateNavLocation(mediaQuery);
     mediaQuery.addEventListener("change", updateNavLocation);
 }
+
 function initSmoothScroll() {
     const scrollButtons = document.querySelectorAll(".scroll-top-btn");
 
@@ -499,14 +500,10 @@ function initContactForm() {
 
     // On submit
     form.addEventListener("submit", function (e) {
-        const isNameValid = validateName();
-        const isEmailValid = validateEmail();
-        const isPhoneValid = validatePhone();
-        const isMessageValid = validateMessage();
-
-        if (!isNameValid || !isEmailValid || !isPhoneValid || !isMessageValid) {
-            e.preventDefault();
-        }
+        validateName();
+        validateEmail();
+        validatePhone();
+        validateMessage();
     });
 }
 
